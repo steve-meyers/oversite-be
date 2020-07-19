@@ -39,7 +39,7 @@ def add_user():
 	    return(str(e))
 
 
-@app.route("/getall")
+@app.route("/users")
 def get_all():
     try:
         users = User.query.all()
@@ -48,7 +48,7 @@ def get_all():
 	    return(str(e))
 
 
-@app.route("/get/<id_>")
+@app.route("/user/<id_>")
 def get_by_id(id_):
     try:
         user = User.query.filter_by(id=id_).first()
