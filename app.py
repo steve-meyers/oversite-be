@@ -15,7 +15,7 @@ def hello():
     return "Hello World!"
 
 
-@app.route("/add_new_user")
+@app.route("/add_new_user", methods = ['POST'])
 def add_user():
     first_name = request.args.get('first_name')
     last_name = request.args.get('last_name')
