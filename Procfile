@@ -1,1 +1,1 @@
-web: gunicorn oversite-api:app
+web: gunicorn app:app
