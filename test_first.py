@@ -17,4 +17,4 @@ def test_it_returns_users():
     global test_browser
     response = test_browser.get('/users')
     assert response.status_code == 200
-    # assert json.loads(response.data) == []
+    assert type(json.loads(response.data)) is list
