@@ -3,7 +3,6 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import requests
 import json
-import code
 import dotenv
 
 dotenv.load_dotenv()
