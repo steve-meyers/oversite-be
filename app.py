@@ -62,35 +62,21 @@ def get_by_id(id_):
 
 @app.route("/members_by_state/<state_>")
 def get_members_by_state(state_):
-    headers = {'X-API-Key': 'JBIDWEsRXZPkQJPUHkaH5t26psMcJxS2x8kOPh0A'}
+    headers = {'X-API-Key': ''}
     URL = f'https://api.propublica.org/congress/v1/members/senate/{state_}/current.json'
     response = requests.get(URL, headers = headers).json()
     results = response['results']
-    
-    # members = results.map do |result|
-    #   MemberIndex(first_name = result['first_name'],
-    #               last_name =result['last_name'],
-    #               role = result['role'],
-    #               party = result['party'])
-    # end
-    
-    
+
     objects = map(lambda result: MemberIndex(first_name = result['first_name'],
-                                   party = result['party'],
-                                   role = result['role'],
-                                   last_name =result['last_name']),
-                                   results)
+                                             party = result['party'],
+                                             role = result['role'],
+                                             last_name =result['last_name']),
+                                             results)
     list_of_members = list(objects)
-    code.interact(local=dict(globals(), **locals()))
-    
+
     try:
-        return jsonify(test[0])
+        return jsonify({"results": list(map(lambda member: member.serialize(), list_of_members))})
 
-
-        # return jsonify(first_name=member.first_name,
-        #                last_name=member.last_name,
-        #                role=member.role,
-        #                party=member.party)
     except Exception as e:
 	    return(str(e))
 
