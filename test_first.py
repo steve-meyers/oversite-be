@@ -20,3 +20,6 @@ def test_it_returns_members_by_state():
     response = test_browser.get(f'/members_by_state/{state}')
     assert response.status_code == 200
     assert type(json.loads(response.data)) is dict
+    # assert type(json.loads(response.data).get('results')[0]['senate']) is list
+    assert type(json.loads(response.data)['results'][0]['senate']) is list
+    assert type(json.loads(response.data)['results'][1]['house']) is list
