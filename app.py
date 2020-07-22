@@ -65,7 +65,7 @@ def get_by_id(id_):
 
 @app.route("/members_by_state/<state_>")
 def get_members_by_state(state_):
-    headers = {'X-API-Key': os.getenv('propapi')}
+    headers = {'X-API-Key': os.getenv('PROP_API')}
     URL = f'https://api.propublica.org/congress/v1/members/senate/{state_}/current.json'
     response = requests.get(URL, headers = headers).json()
     results = response['results']
