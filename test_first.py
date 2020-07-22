@@ -1,5 +1,3 @@
-import pytest
-import requests
 import json
 from app import app
 
@@ -21,4 +19,4 @@ def test_it_returns_members_by_state():
     state = 'co'
     response = test_browser.get(f'/members_by_state/{state}')
     assert response.status_code == 200
-    assert type(json.loads(response.data)) is list
+    assert type(json.loads(response.data)) is dict
