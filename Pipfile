@@ -38,6 +38,7 @@ pytest-cov = "*"
 pytest-flask = "*"
 requests = "*"
 marshmallow = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.8"
