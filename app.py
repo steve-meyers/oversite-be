@@ -4,6 +4,9 @@ from flask_sqlalchemy import SQLAlchemy
 import requests
 import json
 import code
+import dotenv
+
+dotenv.load_dotenv()
 
 app = Flask(__name__)
 
@@ -62,7 +65,7 @@ def get_by_id(id_):
 
 @app.route("/members_by_state/<state_>")
 def get_members_by_state(state_):
-    headers = {'X-API-Key': ''}
+    headers = {'X-API-Key': os.getenv('propapi')}
     URL = f'https://api.propublica.org/congress/v1/members/senate/{state_}/current.json'
     response = requests.get(URL, headers = headers).json()
     results = response['results']
