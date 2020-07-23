@@ -7,8 +7,15 @@ matrix:
     - python: 3.8
     dist: xenial
     sudo: true
+services:
+  - postgresql
+addons:
+  postgresql: 9.6
+  chrome: stable
 install:
   - pip install pipenv
   - pipenv install
 script:
-  - pytest
+  - pipenv run python manage.py db migrate
+  - pipenv run python manage.py db upgrade
+  - pipenv run pytest
