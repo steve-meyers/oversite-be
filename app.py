@@ -1,6 +1,7 @@
 import os
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 import requests
 import json
 import code
@@ -9,7 +10,7 @@ import dotenv
 dotenv.load_dotenv()
 
 app = Flask(__name__)
-
+cors = CORS(app)
 app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
