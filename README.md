@@ -2,24 +2,33 @@
 
 ## Set-Up
 
-* install pip
+* $ install pip
 
-* pip3 install pipenv
+* $ pip3 install pipenv
 
-* pipenv install 
+* $ pipenv install 
 
-* pipenv install virtualenv
+* $ pipenv install virtualenv
 
-* virtualenv env
+* $ virtualenv env
 
-* source env/bin/activate
+* $ source env/bin/activate
 
-* python3 manage.py runserver
+* $ python3 manage.py runserver
 
-* Deployment instructions
+* Add .env file to root directory & Add API key to file shown below. (https://www.propublica.org/datastore/apis)
+
+```
+export APP_SETTINGS="config.DevelopmentConfig"
+export DATABASE_URL="postgresql://localhost/oversite"
+
+PROP_API= <API KEY HERE>
+```
 
 * ...
 
+## API EndPoints 
+* "/members_by_state/<state_>"
 ```
 
 {
