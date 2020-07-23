@@ -4,21 +4,22 @@ matrix:
   - python: 3.8
     dist: xenial
 services:
-  - postgresql
+- postgresql
 addons:
   postgresql: 9.6
   chrome: stable
 install:
-  - pip install pipenv
-  - pipenv install
+- pip install pipenv
+- pipenv install
 script:
-  - pipenv run python manage.py db migrate
-  - pipenv run python manage.py db upgrade
-  - pipenv run pytest
+- pipenv run python manage.py db migrate
+- pipenv run python manage.py db upgrade
+- pipenv run pytest
 deploy:
   provider: heroku
   api_key:
-    secure: t3fXO8qL8FZre21Wf1i07rGgi/a6vSm+Woq2FWDUsIRnvCjnqlBnhnluFBalCztnQV9XVk0IIEXgZFELfF6DkHodWmMWHe26d4EAKrf3MY8BLPJWwQueNq2l8K1o1XhPDlwthLjxq8fJrWXiBOcAm01M4lHQ7NmFHGpu8Jioov6L+rMrWKkQ/V8rYIq7YdbCHbcpLwaxE9Q+vlxGH1qXzYu0hz9g3WUcdeH1pOSximCw8TBR4v7kiGRkY3bPXelm16hAlrywW4K3piLcao79EAh6hAXOHhZp6GqK272Zmev7muLJ0MLHsJJHOt8ywFm0tyxw5mJJ/V4nrbqZ/WZFZp9cLMbtq9dJm6jY+ESrU2HDTpWedPQ+VBopa2s/Btc9Por3vOIxq5yZsc+I0fSlIdLaU4GJp3CVqW6NDJB5GUshGwn01Gn09QFA6VwzPpOlmhgzbMtdeJbGVQ7xd+qb851exhJHzsGUxMrB+TsnTVc5SewWEvCPyF0lezRoLBCBnSSvkRGd2BpriPEOh2tk1INFuJltV9/LSkGm2hoJJuyNUz6mD7frsj6NB6pimkNjJbDe6C+g2INkkAx7JpFDKFavDUF7KS1ZteHBpkwBqp2Nthxz3AZARHc8vuWqwHJYGBVtOMW/U5iWXpg4u/1ilkworxXWWYJlokskkMFaIt4=
+    secure: Ozq42nqSkJsYTwo/HyqgsMAL7hf2j4JDKAYzsNOxvGNW6ucexxJgWWKPpF277C81PcZlAkkrE5qx15O3EUzCC9uQgKdeVktqnOySDf3V6C1WohZir+Sgxz7ehFs1DesFGsrOcBuC+xZ0od0KZWdE51RMcBeGEQfQqElhtyz5FQa/5MacTaPGhkQfUJMi+sva9AyJ+1uW5Jt+D7m3A/4O9JMUgrmc089dGhmKJUR6s0IKlxYMqx8CsekzCwlOCgV2SNxZl20fjNwieMQuEbSTVClk7/P9ukEQASotTbluWzo9dXc1FZvKPUtlBZBSAZl6Pe3kdwZKw2ku80lJaKuGnxEm1ruPq6ivnA5yV/vES6W8ltDTxuMRLhd/bI5f4AnEVrsoDxK0CfJRsaHMPaQoCJtdf30TZ0m6tfQZ31ts11fM/uwRm28kp71TLc1uk7KW0iwaPvjDlccnwIwoHN/ZswD2G49BLKyy5aCmh3nRexACV8wn05g1HtbRc0GCbmmOhT7o0DvsdNYPondACjs91wQZAZv2aS9cOi6dSRII/a7J9Sy9FdID9buSVF12vq5PFzdiGQVZYLshq6EpSRetRzpNscYVpHWPUoJFcStUcnehr66mkhlB4J1hKvceXxX8bOfShoEe7wP6omf2MOUK7bDmN1GL0qEnCAL774zDrRo=
   app: oversite-api
   on:
     repo: SMJ289/oversite-be
+  skip_cleanup: 'true'
