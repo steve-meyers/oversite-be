@@ -1,0 +1,24 @@
+language: python
+matrix:
+  include:
+  - python: 3.8
+    dist: xenial
+services:
+  - postgresql
+addons:
+  postgresql: 9.6
+  chrome: stable
+install:
+  - pip install pipenv
+  - pipenv install
+script:
+  - pipenv run python manage.py db migrate
+  - pipenv run python manage.py db upgrade
+  - pipenv run pytest
+deploy:
+  provider: heroku
+  api_key:
+    secure: t3fXO8qL8FZre21Wf1i07rGgi/a6vSm+Woq2FWDUsIRnvCjnqlBnhnluFBalCztnQV9XVk0IIEXgZFELfF6DkHodWmMWHe26d4EAKrf3MY8BLPJWwQueNq2l8K1o1XhPDlwthLjxq8fJrWXiBOcAm01M4lHQ7NmFHGpu8Jioov6L+rMrWKkQ/V8rYIq7YdbCHbcpLwaxE9Q+vlxGH1qXzYu0hz9g3WUcdeH1pOSximCw8TBR4v7kiGRkY3bPXelm16hAlrywW4K3piLcao79EAh6hAXOHhZp6GqK272Zmev7muLJ0MLHsJJHOt8ywFm0tyxw5mJJ/V4nrbqZ/WZFZp9cLMbtq9dJm6jY+ESrU2HDTpWedPQ+VBopa2s/Btc9Por3vOIxq5yZsc+I0fSlIdLaU4GJp3CVqW6NDJB5GUshGwn01Gn09QFA6VwzPpOlmhgzbMtdeJbGVQ7xd+qb851exhJHzsGUxMrB+TsnTVc5SewWEvCPyF0lezRoLBCBnSSvkRGd2BpriPEOh2tk1INFuJltV9/LSkGm2hoJJuyNUz6mD7frsj6NB6pimkNjJbDe6C+g2INkkAx7JpFDKFavDUF7KS1ZteHBpkwBqp2Nthxz3AZARHc8vuWqwHJYGBVtOMW/U5iWXpg4u/1ilkworxXWWYJlokskkMFaIt4=
+  app: oversite-api
+  on:
+    repo: smj289/oversite-be
