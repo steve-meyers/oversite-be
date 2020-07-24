@@ -22,9 +22,9 @@ class MemberShow:
         self.role = role
         self.phone = phone
         self.address = address
-        self.twitter = twitter
-        self.youtube = youtube
-        self.facebook = facebook
+        self.twitter = self.twitter_url(twitter)
+        self.youtube = self.youtube_url(youtube)
+        self.facebook = self.facebook_url(facebook)
         self.party = self.party_name(party) 
         self.chamber = chamber
         self.state = state
@@ -41,7 +41,16 @@ class MemberShow:
           return 'Independent'
         else:
           return party
-        
+
+    def twitter_url(self, handle):
+        return f'https://twitter.com/{handle}'
+
+    def facebook_url(self, handle):
+        return f'https://www.facebook.com/{handle}'
+
+    def youtube_url(self, handle):
+        return f'https://www.youtube.com/user/{handle}'
+
     def serialize(self):  
         return {
             'id' : self.id,
