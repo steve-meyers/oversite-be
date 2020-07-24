@@ -32,18 +32,33 @@ class MemberShow:
         self.contact_form_url = contact_form_url
 
 class MemberIndex:
-    def __init__(self, 
+    def __init__(self,
+                 id,
                  first_name,
                  last_name,
                  role,
                  party):
+        self.id = id
+        self.image = f'https://theunitedstates.io/images/congress/original/{id}.jpg'
         self.first_name = first_name
         self.last_name = last_name
         self.role = role
-        self.party = party
-      
+        self.party = self.full_name(party)
+    
+    def full_name(self, party):
+        if party == 'R':
+          return 'Republican'
+        elif party == 'D':
+          return 'Democrat'
+        elif party == 'I':
+          return 'Independent'
+        else:
+          return party
+        
     def serialize(self):  
         return {           
+            'id': self.id,
+            'image': self.image,
             'first_name': self.first_name,
             'last_name': self.last_name,
             'role': self.role,
