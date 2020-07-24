@@ -74,17 +74,19 @@ def get_members_by_state(state_):
     senate_results = senate_response['results']
     house_results = house_response['results']
 
-    senator_objects = map(lambda result: MemberIndex(first_name = result['first_name'],
-                                                    party = result['party'],
-                                                    role = result['role'],
-                                                    last_name =result['last_name']),
-                                                    senate_results)
+    senator_objects = map(lambda result: MemberIndex(id = result['id'],
+                                                     first_name = result['first_name'],
+                                                     party = result['party'],
+                                                     role = result['role'],
+                                                     last_name =result['last_name']),
+                                                     senate_results)
 
-    rep_objects = map(lambda result: MemberIndex(first_name = result['first_name'],
-                                                party = result['party'],
-                                                role = result['role'],
-                                                last_name =result['last_name']),
-                                                house_results)
+    rep_objects = map(lambda result: MemberIndex(id = result['id'],
+                                                 first_name = result['first_name'],
+                                                 party = result['party'],
+                                                 role = result['role'],
+                                                 last_name =result['last_name']),
+                                                 house_results)
                           
     senators = list(senator_objects)
     reps = list(rep_objects)
