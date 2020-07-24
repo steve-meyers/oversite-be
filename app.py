@@ -71,34 +71,31 @@ def get_members_by_state(state_):
     URL_HOUSE = f'https://api.propublica.org/congress/v1/members/house/{state_}/current.json'
     senate_response = requests.get(URL_SENATE, headers = headers).json()
     house_response = requests.get(URL_HOUSE, headers = headers).json()
-    # senate_results = senate_response['results']
-    # house_results = house_response['results']
-    results = senate_response['results'] + house_response['results']
-    objects = map(lambda result: MemberIndex(id = result['id'],
+    senate_results = senate_response['results']
+    house_results = house_response['results']
+
+    senator_objects = map(lambda result: MemberIndex(id = result['id'],
                                                      first_name = result['first_name'],
                                                      party = result['party'],
                                                      role = result['role'],
                                                      last_name =result['last_name']),
-                                                     results)
+                                                     senate_results)
 
-    # rep_objects = map(lambda result: MemberIndex(id = result['id'],
-    #                                              first_name = result['first_name'],
-    #                                              party = result['party'],
-    #                                              role = result['role'],
-    #                                              last_name =result['last_name']),
-    #                                              house_results)
+    rep_objects = map(lambda result: MemberIndex(id = result['id'],
+                                                 first_name = result['first_name'],
+                                                 party = result['party'],
+                                                 role = result['role'],
+                                                 last_name =result['last_name']),
+                                                 house_results)
                           
-    # senators = list(senator_objects)
-    # reps = list(rep_objects)
-    
-    results_list = list(objects)
+    senators = list(senator_objects)
+    reps = list(rep_objects)
+
     try:
-        return jsonify({"results": list(map(lambda member: member.serialize(), results_list))})
-    # try:
-    #     return jsonify({"results": 
-    #     [{"senate": list(map(lambda member: member.serialize(), senators))}, 
-    #     {"house": list(map(lambda member: member.serialize(), reps))}]
-    #     })
+        return jsonify({"results": 
+        [{"senate": list(map(lambda member: member.serialize(), senators))}, 
+        {"house": list(map(lambda member: member.serialize(), reps))}]
+        })
 
     except Exception as e:
 	    return(str(e))
