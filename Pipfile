@@ -39,6 +39,7 @@ pytest-flask = "*"
 requests = "*"
 marshmallow = "*"
 python-dotenv = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.8"
