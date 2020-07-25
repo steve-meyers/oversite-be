@@ -22,7 +22,8 @@ class MemberShow:
         self.role = role
         self.phone = phone
         self.address = address
-        self.twitter = self.twitter_url(twitter)
+        self.twitter_url = self.twitter_url(twitter)
+        self.twitter_handle = twitter
         self.youtube = self.youtube_url(youtube)
         self.facebook = self.facebook_url(facebook)
         self.party = self.party_name(party) 
@@ -43,13 +44,22 @@ class MemberShow:
           return party
 
     def twitter_url(self, handle):
-        return f'https://twitter.com/{handle}'
+        if handle == None:
+          return None
+        else:
+          return f'https://twitter.com/{handle}'
 
     def facebook_url(self, handle):
-        return f'https://www.facebook.com/{handle}'
+        if handle == None:
+          return None
+        else:
+          return f'https://www.facebook.com/{handle}'
 
     def youtube_url(self, handle):
-        return f'https://www.youtube.com/user/{handle}'
+        if handle == None:
+          return None
+        else:
+          return f'https://www.youtube.com/user/{handle}'
 
     def serialize(self):  
         return {
@@ -60,7 +70,8 @@ class MemberShow:
             'role' : self.role,
             'phone' : self.phone,
             'address' : self.address,
-            'twitter' : self.twitter,
+            'twitter_url' : self.twitter_url,
+            'twitter_handle' : self.twitter_handle,
             'youtube' : self.youtube,
             'facebook' : self.facebook,
             'party' : self.party,

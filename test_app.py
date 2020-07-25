@@ -18,10 +18,23 @@ def test_it_returns_members_by_state():
     global test_browser
     state = 'co'
     response = test_browser.get(f'/members_by_state/{state}')
+    response_data = json.loads(response.data)
     assert response.status_code == 200
-    assert type(json.loads(response.data)) is dict
-    assert type(json.loads(response.data)['results'][0]['senate']) is list
-    assert type(json.loads(response.data)['results'][1]['house']) is list
+    assert type(response_data) is dict
+    
+    assert type(response_data['results'][0]['senate']) is list
+    assert 'id' in response_data['results'][0]['senate'][0]
+    assert 'first_name' in response_data['results'][0]['senate'][0]
+    assert 'last_name' in response_data['results'][0]['senate'][0]
+    assert 'party' in response_data['results'][0]['senate'][0]
+    assert 'role' in response_data['results'][0]['senate'][0]
+    
+    assert type(response_data['results'][1]['house']) is list
+    assert 'id' in response_data['results'][1]['house'][0]
+    assert 'first_name' in response_data['results'][1]['house'][0]
+    assert 'last_name' in response_data['results'][1]['house'][0]
+    assert 'party' in response_data['results'][1]['house'][0]
+    assert 'role' in response_data['results'][1]['house'][0]
 
 def test_it_returns_member_details():
     global test_browser
@@ -37,7 +50,8 @@ def test_it_returns_member_details():
     assert 'role' in response_data.get('results')[0]
     assert 'phone' in response_data.get('results')[0]
     assert 'address' in response_data.get('results')[0]
-    assert 'twitter' in response_data.get('results')[0]
+    assert 'twitter_url' in response_data.get('results')[0]
+    assert 'twitter_handle' in response_data.get('results')[0]
     assert 'youtube' in response_data.get('results')[0]
     assert 'facebook' in response_data.get('results')[0]
     assert 'party' in response_data.get('results')[0]
