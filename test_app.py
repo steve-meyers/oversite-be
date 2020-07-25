@@ -1,5 +1,6 @@
 import json
 from app import app
+import random
 
 test_browser = app.test_client()
 
@@ -60,3 +61,15 @@ def test_it_returns_member_details():
     assert 'district' in response_data.get('results')[0]
     assert 'website' in response_data.get('results')[0]
     assert 'contact_form_url' in response_data.get('results')[0]
+
+def test_it_sends_tweet_to_microservice():
+    f = ['cool', 'great', 'awesome', 'chill', 'dude', 'yes', 'yazy'] 
+    num = [*range(10, 999999, 1)]
+    rand = random.choice(f)
+    rand_num = random.choice(num)
+    global test_browser
+    handle = 'smj289'
+    message = f'hello {rand} steven{rand_num}'
+    response = test_browser.get(f'/tweet?handle={handle}&message={message}')
+    response_data = json.loads(response.data)
+    assert 'Message sent' == response_data.get('message')
