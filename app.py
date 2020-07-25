@@ -44,7 +44,7 @@ def add_user():
         db.session.commit()
         return "User added. user id={}".format(user.id)
     except Exception as e:
-	    return(str(e))
+        return(str(e))
 
 
 @app.route("/users")
@@ -53,7 +53,7 @@ def get_all():
         users = User.query.all()
         return jsonify([e.serialize() for e in users])
     except Exception as e:
-	    return(str(e))
+        return(str(e))
 
 
 @app.route("/user/<id_>")
@@ -62,7 +62,7 @@ def get_by_id(id_):
         user = User.query.filter_by(id=id_).first()
         return jsonify(user.serialize())
     except Exception as e:
-	    return(str(e))
+        return(str(e))
 
 @app.route("/members_by_state/<state_>")
 def get_members_by_state(state_):
@@ -98,7 +98,7 @@ def get_members_by_state(state_):
         })
 
     except Exception as e:
-	    return(str(e))
+        return(str(e))
 
 @app.route("/member/<id_>")
 def get_member_details(id_):
@@ -129,7 +129,18 @@ def get_member_details(id_):
     try:
         return jsonify({'results': [member.serialize()]})
     except Exception as e:
-	    return(str(e))
+        return(str(e))
+
+@app.route("/tweet")    
+def get_message_sent_to_twitter():
+    handle = request.args.get('handle', None)
+    message = request.args.get('message', None)
+    URL = f'https://gentle-falls-99830.herokuapp.com/send-tweet?message={message}&handle={handle}'
+    response = requests.get(URL).json()
+    try:
+        return response
+    except Exception as e:
+        return(str(e))
 
 if __name__ == '__main__':
     app.run()
