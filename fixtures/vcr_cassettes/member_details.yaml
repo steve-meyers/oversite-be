@@ -1,0 +1,364 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+      X-API-Key:
+      - JBIDWEsRXZPkQJPUHkaH5t26psMcJxS2x8kOPh0A
+    method: GET
+    uri: https://api.propublica.org/congress/v1/members/G000562.json
+  response:
+    body:
+      string: "{\n   \"status\":\"OK\",\n   \"copyright\":\"Copyright (c) 2020 Pro\
+        \ Publica Inc. All Rights Reserved.\",\n   \"results\":[\n      {\n      \
+        \   \"id\": \"G000562\",\n         \"member_id\": \"G000562\",\n         \n\
+        \         \"first_name\": \"Cory\",\n         \"middle_name\": null,\n   \
+        \      \"last_name\": \"Gardner\",\n         \"suffix\": null,\n         \"\
+        date_of_birth\": \"1974-08-22\",\n         \"gender\": \"M\",\n         \"\
+        url\": \"https://www.gardner.senate.gov\",\n         \"times_topics_url\"\
+        : \"\",\n         \"times_tag\": \"\",\n         \"govtrack_id\": \"412406\"\
+        ,\n         \"cspan_id\": \"623308\",\n         \"votesmart_id\": \"30004\"\
+        ,\n         \"icpsr_id\": \"21112\",\n         \"twitter_account\": \"SenCoryGardner\"\
+        ,\n         \"facebook_account\": \"SenCoryGardner\",\n         \"youtube_account\"\
+        : null,\n         \"crp_id\": \"N00030780\",\n         \"google_entity_id\"\
+        : \"/m/0czd33q\",\n         \"rss_url\": null,\n         \"in_office\": true,\n\
+        \         \"current_party\": \"R\",\n         \"most_recent_vote\": \"2020-07-23\"\
+        ,\n         \"last_updated\": \"2020-07-24 08:25:21 -0400\",\n         \"\
+        roles\": [\n {\n           \"congress\": \"116\",\n           \"chamber\"\
+        : \"Senate\",\n           \"title\": \"Senator, 2nd Class\",\n           \"\
+        short_title\": \"Sen.\",\n           \"state\": \"CO\",\n           \"party\"\
+        : \"R\",\n           \"leadership_role\": null,\n           \"fec_candidate_id\"\
+        : \"H0CO04122\",\n           \"seniority\": \"5\",\n           \"senate_class\"\
+        : \"2\",\"state_rank\": \"junior\",\"lis_id\": \"S377\",\n           \"ocd_id\"\
+        : \"ocd-division/country:us/state:co\",\n           \"start_date\": \"2019-01-03\"\
+        ,\n           \"end_date\": \"2021-01-03\",\n           \"office\": \"354\
+        \ Russell Senate Office Building\",\n           \"phone\": \"202-224-5941\"\
+        ,\n           \"fax\": \"202-225-5870\",\n           \"contact_form\": \"\
+        https://www.gardner.senate.gov/contact-cory/email-cory\",\n           \"cook_pvi\"\
+        : null,\n           \"dw_nominate\": 0.444,\n           \"ideal_point\": null,\n\
+        \           \"next_election\": \"2020\",\n           \"total_votes\": 568,\n\
+        \           \"missed_votes\": 10,\n           \"total_present\": 0,\n    \
+        \       \"senate_class\": \"2\",\n           \"state_rank\": \"junior\",\n\
+        \           \"lis_id\": \"S377\",\n           \"bills_sponsored\": 81,\n \
+        \          \"bills_cosponsored\": 292,\n           \"missed_votes_pct\": 1.76,\n\
+        \           \"votes_with_party_pct\": 96.75,\n           \"votes_against_party_pct\"\
+        : 3.25,\n           \"committees\": [\n           {\n             \"name\"\
+        : \"Committee on Energy and Natural Resources\",\n             \"code\": \"\
+        SSEG\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSEG.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 7,\n             \"begin_date\": \"2019-01-09\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Committee on Foreign Relations\",\n            \
+        \ \"code\": \"SSFR\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSFR.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 4,\n             \"begin_date\": \"2019-01-09\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Committee on Commerce, Science, and Transportation\"\
+        ,\n             \"code\": \"SSCM\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSCM.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 8,\n             \"begin_date\": \"2019-01-09\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Commission on Security and Cooperation in Europe\"\
+        ,\n             \"code\": \"JCSE\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/JCSE.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 3,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2021-01-03\"\n           }\n           ],\n\
+        \           \"subcommittees\": [\n           {\n             \"name\": \"\
+        Energy Subcommittee\",\n             \"code\": \"SSEG01\",\n             \"\
+        parent_committee_id\": \"SSEG\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSEG/subcommittees/SSEG01.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 5,\n             \"begin_date\": \"2019-02-05\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Public Lands, Forests, and Mining Subcommittee\"\
+        ,\n             \"code\": \"SSEG03\",\n             \"parent_committee_id\"\
+        : \"SSEG\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSEG/subcommittees/SSEG03.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 6,\n             \"begin_date\": \"2019-02-05\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"National Parks Subcommittee\",\n             \"\
+        code\": \"SSEG04\",\n             \"parent_committee_id\": \"SSEG\",\n   \
+        \          \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSEG/subcommittees/SSEG04.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 4,\n             \"begin_date\": \"2019-02-05\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Water and Power Subcommittee\",\n             \"\
+        code\": \"SSEG07\",\n             \"parent_committee_id\": \"SSEG\",\n   \
+        \          \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSEG/subcommittees/SSEG07.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 5,\n             \"begin_date\": \"2019-02-05\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Communications, Technology, Innovation, and the\
+        \ Internet\",\n             \"code\": \"SSCM26\",\n             \"parent_committee_id\"\
+        : \"SSCM\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSCM/subcommittees/SSCM26.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 7,\n             \"begin_date\": \"2019-01-24\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Aviation and Space Subcommittee\",\n           \
+        \  \"code\": \"SSCM28\",\n             \"parent_committee_id\": \"SSCM\",\n\
+        \             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSCM/subcommittees/SSCM28.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 5,\n             \"begin_date\": \"2019-01-24\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Science, Oceans, Fisheries, and Weather Subcommittee\"\
+        ,\n             \"code\": \"SSCM30\",\n             \"parent_committee_id\"\
+        : \"SSCM\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSCM/subcommittees/SSCM30.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Chair\"\
+        ,\n             \"rank_in_party\": 1,\n             \"begin_date\": \"2019-01-24\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Transportation and Safety Subcommittee\",\n    \
+        \         \"code\": \"SSCM32\",\n             \"parent_committee_id\": \"\
+        SSCM\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSCM/subcommittees/SSCM32.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 5,\n             \"begin_date\": \"2019-01-24\"\
+        ,\n             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"East Asia, the Pacific, and International Cybersecurity\
+        \ Policy\",\n             \"code\": \"SSFR02\",\n             \"parent_committee_id\"\
+        : \"SSFR\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSFR/subcommittees/SSFR02.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Chair\"\
+        ,\n             \"rank_in_party\": 1,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Western Hemisphere, Transnational Crime, Civilian\
+        \ Security, Democracy, Human Rights, and Global Women's Issues\",\n      \
+        \       \"code\": \"SSFR06\",\n             \"parent_committee_id\": \"SSFR\"\
+        ,\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSFR/subcommittees/SSFR06.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 4,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2021-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Near East, South Asia, Central Asia, and Counterterrorism\"\
+        ,\n             \"code\": \"SSFR07\",\n             \"parent_committee_id\"\
+        : \"SSFR\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/116/senate/committees/SSFR/subcommittees/SSFR07.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 4,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2021-01-03\"\n           }\n           ]\n \
+        \        },\n        {\n           \"congress\": \"115\",\n           \"chamber\"\
+        : \"Senate\",\n           \"title\": \"Senator, 2nd Class\",\n           \"\
+        short_title\": \"Sen.\",\n           \"state\": \"CO\",\n           \"party\"\
+        : \"R\",\n           \"leadership_role\": null,\n           \"fec_candidate_id\"\
+        : \"S4CO00395\",\n           \"seniority\": \"3\",\n           \"senate_class\"\
+        : \"2\",\"state_rank\": \"junior\",\"lis_id\": \"S377\",\n           \"ocd_id\"\
+        : \"ocd-division/country:us/state:co\",\n           \"start_date\": \"2017-01-03\"\
+        ,\n           \"end_date\": \"2019-01-03\",\n           \"office\": \"354\
+        \ Russell Senate Office Building\",\n           \"phone\": \"202-224-5941\"\
+        ,\n           \"fax\": \"202-225-5870\",\n           \"contact_form\": \"\
+        https://www.gardner.senate.gov/contact-cory/email-cory\",\n           \"cook_pvi\"\
+        : null,\n           \"dw_nominate\": 0.454,\n           \"ideal_point\": null,\n\
+        \           \"next_election\": \"2020\",\n           \"total_votes\": 599,\n\
+        \           \"missed_votes\": 2,\n           \"total_present\": 0,\n     \
+        \      \"senate_class\": \"2\",\n           \"state_rank\": \"junior\",\n\
+        \           \"lis_id\": \"S377\",\n           \"bills_sponsored\": 53,\n \
+        \          \"bills_cosponsored\": 271,\n           \"missed_votes_pct\": 0.33,\n\
+        \           \"votes_with_party_pct\": 97.80,\n           \"votes_against_party_pct\"\
+        : 2.20,\n           \"committees\": [\n           {\n             \"name\"\
+        : \"Committee on Foreign Relations\",\n             \"code\": \"SSFR\",\n\
+        \             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSFR.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 6,\n             \"begin_date\": \"2017-01-03\"\
+        ,\n             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Commission on Security and Cooperation in Europe\"\
+        ,\n             \"code\": \"JCSE\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/JCSE.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 5,\n             \"begin_date\": \"2017-01-03\"\
+        ,\n             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Committee on the Budget\",\n             \"code\"\
+        : \"SSBU\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSBU.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 9,\n             \"begin_date\": \"2017-01-03\"\
+        ,\n             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Committee on Commerce, Science, and Transportation\"\
+        ,\n             \"code\": \"SSCM\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSCM.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 13,\n             \"begin_date\": \"2017-01-03\"\
+        ,\n             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Committee on Energy and Natural Resources\",\n \
+        \            \"code\": \"SSEG\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSEG.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 7,\n             \"begin_date\": \"2017-01-03\"\
+        ,\n             \"end_date\": \"2019-01-03\"\n           }\n           ],\n\
+        \           \"subcommittees\": [\n           {\n             \"name\": \"\
+        Aviation and Space\",\n             \"code\": \"SSCM01\",\n             \"\
+        parent_committee_id\": \"SSCM\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSCM/subcommittees/SSCM01.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 11,\n             \"begin_date\": \"\"\
+        ,\n             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Communications, Technology, Innovation, and the\
+        \ Internet\",\n             \"code\": \"SSCM26\",\n             \"parent_committee_id\"\
+        : \"SSCM\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSCM/subcommittees/SSCM26.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 12,\n             \"begin_date\": \"\"\
+        ,\n             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"East Asia, the Pacific, and International Cybersecurity\
+        \ Policy\",\n             \"code\": \"SSFR02\",\n             \"parent_committee_id\"\
+        : \"SSFR\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSFR/subcommittees/SSFR02.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Chair\"\
+        ,\n             \"rank_in_party\": 1,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Multilateral International Development, Multilateral\
+        \ Institutions, and International Economic, Energy, and Environmental Policy\"\
+        ,\n             \"code\": \"SSFR15\",\n             \"parent_committee_id\"\
+        : \"SSFR\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSFR/subcommittees/SSFR15.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 3,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Science, Oceans, Fisheries, and Weather\",\n   \
+        \          \"code\": \"SSCM22\",\n             \"parent_committee_id\": \"\
+        SSCM\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSCM/subcommittees/SSCM22.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 7,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Space, Science, and Competitiveness\",\n       \
+        \      \"code\": \"SSCM24\",\n             \"parent_committee_id\": \"SSCM\"\
+        ,\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSCM/subcommittees/SSCM24.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 7,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Western Hemisphere, Transnational Crime, Civilian\
+        \ Security, Democracy, Human Rights, and Global Women's Issues\",\n      \
+        \       \"code\": \"SSFR06\",\n             \"parent_committee_id\": \"SSFR\"\
+        ,\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSFR/subcommittees/SSFR06.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 4,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Transportation and Safety\",\n             \"code\"\
+        : \"SSCM25\",\n             \"parent_committee_id\": \"SSCM\",\n         \
+        \    \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSCM/subcommittees/SSCM25.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 8,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Energy Subcommittee\",\n             \"code\": \"\
+        SSEG01\",\n             \"parent_committee_id\": \"SSEG\",\n             \"\
+        api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSEG/subcommittees/SSEG01.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Chair\"\
+        ,\n             \"rank_in_party\": 1,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"National Parks Subcommittee\",\n             \"\
+        code\": \"SSEG04\",\n             \"parent_committee_id\": \"SSEG\",\n   \
+        \          \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSEG/subcommittees/SSEG04.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 4,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2019-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Public Lands, Forests, and Mining Subcommittee\"\
+        ,\n             \"code\": \"SSEG03\",\n             \"parent_committee_id\"\
+        : \"SSEG\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/115/senate/committees/SSEG/subcommittees/SSEG03.json\"\
+        ,\n             \"side\": \"majority\",\n             \"title\": \"Member\"\
+        ,\n             \"rank_in_party\": 6,\n             \"begin_date\": \"\",\n\
+        \             \"end_date\": \"2019-01-03\"\n           }\n           ]\n \
+        \        },\n        {\n           \"congress\": \"114\",\n           \"chamber\"\
+        : \"Senate\",\n           \"title\": \"Senator, 2nd Class\",\n           \"\
+        short_title\": \"Sen.\",\n           \"state\": \"CO\",\n           \"party\"\
+        : \"R\",\n           \"leadership_role\": null,\n           \"fec_candidate_id\"\
+        : \"S4CO00395\",\n           \"seniority\": \"1\",\n           \"senate_class\"\
+        : \"2\",\"state_rank\": \"\",\"lis_id\": \"S377\",\n           \"ocd_id\"\
+        : \"ocd-division/country:us/state:co\",\n           \"start_date\": \"2015-01-06\"\
+        ,\n           \"end_date\": \"2017-01-03\",\n           \"office\": null,\n\
+        \           \"phone\": null,\n           \"fax\": null,\n           \"contact_form\"\
+        : null,\n           \"cook_pvi\": null,\n           \"dw_nominate\": 0.456,\n\
+        \           \"ideal_point\": null,\n           \"next_election\": \"2020\"\
+        ,\n           \"total_votes\": 502,\n           \"missed_votes\": 11,\n  \
+        \         \"total_present\": 0,\n           \"senate_class\": \"2\",\n   \
+        \        \"state_rank\": \"\",\n           \"lis_id\": \"S377\",\n       \
+        \    \"bills_sponsored\": 46,\n           \"bills_cosponsored\": 192,\n  \
+        \         \"missed_votes_pct\": 2.19,\n           \"votes_with_party_pct\"\
+        : 91.29,\n           \"votes_against_party_pct\": 8.71,\n           \"committees\"\
+        : [\n           {\n             \"name\": \"Committee on Commerce, Science,\
+        \ and Transportation\",\n             \"code\": \"SSCM\",\n             \"\
+        api_uri\": \"https://api.propublica.org/congress/v1/114/senate/committees/SSCM.json\"\
+        ,\n             \"rank_in_party\": null,\n             \"begin_date\": \"\"\
+        ,\n             \"end_date\": \"2017-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Committee on Foreign Relations\",\n            \
+        \ \"code\": \"SSFR\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/114/senate/committees/SSFR.json\"\
+        ,\n             \"rank_in_party\": null,\n             \"begin_date\": \"\"\
+        ,\n             \"end_date\": \"2017-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Committee on Energy and Natural Resources\",\n \
+        \            \"code\": \"SSEG\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/114/senate/committees/SSEG.json\"\
+        ,\n             \"rank_in_party\": null,\n             \"begin_date\": \"\"\
+        ,\n             \"end_date\": \"2017-01-03\"\n           },\n           {\n\
+        \             \"name\": \"Committee on Small Business and Entrepreneurship\"\
+        ,\n             \"code\": \"SSSB\",\n             \"api_uri\": \"https://api.propublica.org/congress/v1/114/senate/committees/SSSB.json\"\
+        ,\n             \"rank_in_party\": null,\n             \"begin_date\": \"\"\
+        ,\n             \"end_date\": \"2017-01-03\"\n           }\n           ],\n\
+        \           \"subcommittees\": [\n           ]\n         },\n        {\n \
+        \          \"congress\": \"113\",\n           \"chamber\": \"House\",\n  \
+        \         \"title\": \"Representative\",\n           \"short_title\": \"Rep.\"\
+        ,\n           \"state\": \"CO\",\n           \"party\": \"R\",\n         \
+        \  \"leadership_role\": null,\n           \"fec_candidate_id\": \"\",\n  \
+        \         \"seniority\": \"4\",\n           \"district\": \"4\", \"at_large\"\
+        : false,\n           \"ocd_id\": \"ocd-division/country:us/state:co/cd:4\"\
+        ,\n           \"start_date\": \"2013-01-03\",\n           \"end_date\": \"\
+        2015-01-03\",\n           \"office\": null,\n           \"phone\": null,\n\
+        \           \"fax\": null,\n           \"contact_form\": null,\n         \
+        \  \"cook_pvi\": null,\n           \"dw_nominate\": 0.456,\n           \"\
+        ideal_point\": 0.865588416,\n           \"next_election\": \"\",\n       \
+        \    \"total_votes\": 1204,\n           \"missed_votes\": 24,\n          \
+        \ \"total_present\": 0,\n           \"senate_class\": \"\",\n           \"\
+        state_rank\": \"\",\n           \"lis_id\": \"S377\",\n           \"bills_sponsored\"\
+        : 27,\n           \"bills_cosponsored\": 197,\n           \"missed_votes_pct\"\
+        : 1.99,\n           \"votes_with_party_pct\": 92.68,\n           \"votes_against_party_pct\"\
+        : 7.23,\n           \"committees\": [\n           {\n             \"name\"\
+        : \"Committee on Energy and Commerce\",\n             \"code\": \"HSIF\",\n\
+        \             \"api_uri\": \"https://api.propublica.org/congress/v1/113/house/committees/HSIF.json\"\
+        ,\n             \"rank_in_party\": 23,\n             \"begin_date\": \"2013-01-04\"\
+        ,\n             \"end_date\": \"2015-01-03\"\n           }\n           ],\n\
+        \           \"subcommittees\": [\n           ]\n         },\n        {\n \
+        \          \"congress\": \"112\",\n           \"chamber\": \"House\",\n  \
+        \         \"title\": \"Representative\",\n           \"short_title\": \"Rep.\"\
+        ,\n           \"state\": \"CO\",\n           \"party\": \"R\",\n         \
+        \  \"leadership_role\": null,\n           \"fec_candidate_id\": \"\",\n  \
+        \         \"seniority\": \"2\",\n           \"district\": \"4\", \"at_large\"\
+        : false,\n           \"ocd_id\": \"ocd-division/country:us/state:co/cd:4\"\
+        ,\n           \"start_date\": \"2011-01-04\",\n           \"end_date\": \"\
+        2013-01-03\",\n           \"office\": null,\n           \"phone\": null,\n\
+        \           \"fax\": null,\n           \"contact_form\": null,\n         \
+        \  \"cook_pvi\": null,\n           \"dw_nominate\": 0.456,\n           \"\
+        ideal_point\": null,\n           \"next_election\": \"\",\n           \"total_votes\"\
+        : 1607,\n           \"missed_votes\": 24,\n           \"total_present\": 0,\n\
+        \           \"senate_class\": \"\",\n           \"state_rank\": \"\",\n  \
+        \         \"lis_id\": \"S377\",\n           \"bills_sponsored\": 7,\n    \
+        \       \"bills_cosponsored\": 175,\n           \"missed_votes_pct\": 1.49,\n\
+        \           \"votes_with_party_pct\": 93.32,\n           \"votes_against_party_pct\"\
+        : 6.62,\n           \"committees\": [\n           {\n             \"name\"\
+        : \"Committee on Energy and Commerce\",\n             \"code\": \"HSIF\",\n\
+        \             \"api_uri\": \"https://api.propublica.org/congress/v1/112/house/committees/HSIF.json\"\
+        ,\n             \"rank_in_party\": 28,\n             \"begin_date\": \"2011-01-12\"\
+        ,\n             \"end_date\": \"2013-01-03\"\n           }\n           ],\n\
+        \           \"subcommittees\": [\n           ]\n         }\n       ]\n   \
+        \     }\n    ]\n}\n"
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+      Access-Control-Allow-Methods:
+      - GET,OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '23058'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 26 Jul 2020 21:25:21 GMT
+      Via:
+      - 1.1 23d87d8c2ce38e34462e6c134d187eeb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - _t4He7QOqFm4qp1zV7HSeGGqxCLtG3gGOoDmMpBSe4T-cxQkCIsJ8w==
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amzn-Trace-Id:
+      - Root=1-5f1df4c1-4447880e75942528dbb131c4
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - QTMuPGPtoAMF9YA=
+      x-amzn-RequestId:
+      - 1ebccfa4-044c-4e28-b734-05a45c5502ad
+    status:
+      code: 200
+      message: OK
+version: 1

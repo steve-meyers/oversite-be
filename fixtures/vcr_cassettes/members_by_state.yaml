@@ -1,0 +1,186 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+      X-API-Key:
+      - JBIDWEsRXZPkQJPUHkaH5t26psMcJxS2x8kOPh0A
+    method: GET
+    uri: https://api.propublica.org/congress/v1/members/senate/co/current.json
+  response:
+    body:
+      string: "{\n   \"status\":\"OK\",\n   \"copyright\":\"Copyright (c) 2020 Pro\
+        \ Publica Inc. All Rights Reserved.\",\n   \"results\":[\n      {\n      \
+        \   \"id\": \"G000562\",\n         \"name\": \"Cory Gardner\",\n         \"\
+        first_name\": \"Cory\",\n         \"middle_name\": null,\n         \"last_name\"\
+        : \"Gardner\",\n         \"suffix\": null,\n         \"role\": \"Senator,\
+        \ 2nd Class\",\n         \"gender\": \"M\",\n         \"party\": \"R\",\n\
+        \         \"times_topics_url\": \"\",\n         \"twitter_id\": \"SenCoryGardner\"\
+        ,\n         \"facebook_account\": null,\n         \"youtube_id\": null,\n\
+        \         \"seniority\": \"5\",\n         \"next_election\": \"2020\",\n \
+        \        \"api_uri\": \"https://api.propublica.org/congress/v1/members/G000562.json\"\
+        \n      },\n      {\n         \"id\": \"B001267\",\n         \"name\": \"\
+        Michael Bennet\",\n         \"first_name\": \"Michael\",\n         \"middle_name\"\
+        : null,\n         \"last_name\": \"Bennet\",\n         \"suffix\": null,\n\
+        \         \"role\": \"Senator, 3rd Class\",\n         \"gender\": \"M\",\n\
+        \         \"party\": \"D\",\n         \"times_topics_url\": \"http://topics.nytimes.com/top/reference/timestopics/people/b/michael_bennet/index.html\"\
+        ,\n         \"twitter_id\": \"SenBennetCo\",\n         \"facebook_account\"\
+        : \"senbennetco\",\n         \"youtube_id\": \"SenatorBennet\",\n        \
+        \ \"seniority\": \"11\",\n         \"next_election\": \"2022\",\n        \
+        \ \"api_uri\": \"https://api.propublica.org/congress/v1/members/B001267.json\"\
+        \n      }\n]}\n"
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+      Access-Control-Allow-Methods:
+      - GET,OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1344'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 26 Jul 2020 21:25:20 GMT
+      Via:
+      - 1.1 e4ca364cc5959e3bf697ae231c5b56b0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - CGzYsANP5_EKNyU2MLtj2_3vmcC-m92sWUkbfDPvGNNex3-aYA_1xQ==
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amzn-Trace-Id:
+      - Root=1-5f1df4c0-e6884b65b8432293b573718b
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - QTMuKGQiIAMFhKQ=
+      x-amzn-RequestId:
+      - 18134d01-1ed7-4bdb-b3b4-529211488ff4
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+      X-API-Key:
+      - JBIDWEsRXZPkQJPUHkaH5t26psMcJxS2x8kOPh0A
+    method: GET
+    uri: https://api.propublica.org/congress/v1/members/house/co/current.json
+  response:
+    body:
+      string: "{\n   \"status\":\"OK\",\n   \"copyright\":\"Copyright (c) 2020 Pro\
+        \ Publica Inc. All Rights Reserved.\",\n   \"results\":[\n      {\n      \
+        \   \"id\": \"D000197\",\n         \"name\": \"Diana DeGette\",\n        \
+        \ \"first_name\": \"Diana\",\n         \"middle_name\": null,\n         \"\
+        last_name\": \"DeGette\",\n         \"suffix\": null,\n         \"role\":\
+        \ \"Representative\",\n         \"gender\": \"F\",\n         \"party\": \"\
+        D\",\n         \"times_topics_url\": null,\n         \"twitter_id\": \"RepDianaDeGette\"\
+        ,\n         \"facebook_account\": \"DianaDeGette\",\n         \"youtube_id\"\
+        : \"RepDianaDeGette\",\n         \"seniority\": \"24\",\n         \"next_election\"\
+        : \"2020\",\n         \"api_uri\": \"https://api.propublica.org/congress/v1/members/D000197.json\"\
+        ,\n         \"district\": \"1\",\n         \"at_large\": false\n      },\n\
+        \      {\n         \"id\": \"N000191\",\n         \"name\": \"Joe Neguse\"\
+        ,\n         \"first_name\": \"Joe\",\n         \"middle_name\": null,\n  \
+        \       \"last_name\": \"Neguse\",\n         \"suffix\": null,\n         \"\
+        role\": \"Representative\",\n         \"gender\": \"M\",\n         \"party\"\
+        : \"D\",\n         \"times_topics_url\": null,\n         \"twitter_id\": \"\
+        RepJoeNeguse\",\n         \"facebook_account\": null,\n         \"youtube_id\"\
+        : null,\n         \"seniority\": \"2\",\n         \"next_election\": \"2020\"\
+        ,\n         \"api_uri\": \"https://api.propublica.org/congress/v1/members/N000191.json\"\
+        ,\n         \"district\": \"2\",\n         \"at_large\": false\n      },\n\
+        \      {\n         \"id\": \"T000470\",\n         \"name\": \"Scott Tipton\"\
+        ,\n         \"first_name\": \"Scott\",\n         \"middle_name\": null,\n\
+        \         \"last_name\": \"Tipton\",\n         \"suffix\": null,\n       \
+        \  \"role\": \"Representative\",\n         \"gender\": \"M\",\n         \"\
+        party\": \"R\",\n         \"times_topics_url\": \"\",\n         \"twitter_id\"\
+        : \"RepTipton\",\n         \"facebook_account\": \"CongressmanScottTipton\"\
+        ,\n         \"youtube_id\": \"RepScottTipton\",\n         \"seniority\": \"\
+        10\",\n         \"next_election\": \"2020\",\n         \"api_uri\": \"https://api.propublica.org/congress/v1/members/T000470.json\"\
+        ,\n         \"district\": \"3\",\n         \"at_large\": false\n      },\n\
+        \      {\n         \"id\": \"B001297\",\n         \"name\": \"Ken Buck\",\n\
+        \         \"first_name\": \"Ken\",\n         \"middle_name\": null,\n    \
+        \     \"last_name\": \"Buck\",\n         \"suffix\": null,\n         \"role\"\
+        : \"Representative\",\n         \"gender\": \"M\",\n         \"party\": \"\
+        R\",\n         \"times_topics_url\": null,\n         \"twitter_id\": \"RepKenBuck\"\
+        ,\n         \"facebook_account\": null,\n         \"youtube_id\": null,\n\
+        \         \"seniority\": \"6\",\n         \"next_election\": \"2020\",\n \
+        \        \"api_uri\": \"https://api.propublica.org/congress/v1/members/B001297.json\"\
+        ,\n         \"district\": \"4\",\n         \"at_large\": false\n      },\n\
+        \      {\n         \"id\": \"L000564\",\n         \"name\": \"Doug Lamborn\"\
+        ,\n         \"first_name\": \"Doug\",\n         \"middle_name\": null,\n \
+        \        \"last_name\": \"Lamborn\",\n         \"suffix\": null,\n       \
+        \  \"role\": \"Representative\",\n         \"gender\": \"M\",\n         \"\
+        party\": \"R\",\n         \"times_topics_url\": null,\n         \"twitter_id\"\
+        : \"RepDLamborn\",\n         \"facebook_account\": \"CongressmanDougLamborn\"\
+        ,\n         \"youtube_id\": \"CongressmanLamborn\",\n         \"seniority\"\
+        : \"14\",\n         \"next_election\": \"2020\",\n         \"api_uri\": \"\
+        https://api.propublica.org/congress/v1/members/L000564.json\",\n         \"\
+        district\": \"5\",\n         \"at_large\": false\n      },\n      {\n    \
+        \     \"id\": \"C001121\",\n         \"name\": \"Jason Crow\",\n         \"\
+        first_name\": \"Jason\",\n         \"middle_name\": null,\n         \"last_name\"\
+        : \"Crow\",\n         \"suffix\": null,\n         \"role\": \"Representative\"\
+        ,\n         \"gender\": \"M\",\n         \"party\": \"D\",\n         \"times_topics_url\"\
+        : null,\n         \"twitter_id\": \"RepJasonCrow\",\n         \"facebook_account\"\
+        : null,\n         \"youtube_id\": null,\n         \"seniority\": \"2\",\n\
+        \         \"next_election\": \"2020\",\n         \"api_uri\": \"https://api.propublica.org/congress/v1/members/C001121.json\"\
+        ,\n         \"district\": \"6\",\n         \"at_large\": false\n      },\n\
+        \      {\n         \"id\": \"P000593\",\n         \"name\": \"Ed Perlmutter\"\
+        ,\n         \"first_name\": \"Ed\",\n         \"middle_name\": null,\n   \
+        \      \"last_name\": \"Perlmutter\",\n         \"suffix\": null,\n      \
+        \   \"role\": \"Representative\",\n         \"gender\": \"M\",\n         \"\
+        party\": \"D\",\n         \"times_topics_url\": null,\n         \"twitter_id\"\
+        : \"RepPerlmutter\",\n         \"facebook_account\": \"RepPerlmutter\",\n\
+        \         \"youtube_id\": \"RepPerlmutter\",\n         \"seniority\": \"14\"\
+        ,\n         \"next_election\": \"2020\",\n         \"api_uri\": \"https://api.propublica.org/congress/v1/members/P000593.json\"\
+        ,\n         \"district\": \"7\",\n         \"at_large\": false\n      }\n\
+        ]}\n"
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+      Access-Control-Allow-Methods:
+      - GET,OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4497'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 26 Jul 2020 21:25:21 GMT
+      Via:
+      - 1.1 48ea53c7edffa2cdbdc32f7d94966344.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 13XqEZqIsYlFlltS2OWqznJZcggtBtdTLW5fBWdweCrlPFUhNFz58g==
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amzn-Trace-Id:
+      - Root=1-5f1df4c1-c4b9d248d3f8980c2e75f8ec
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - QTMuMFkxoAMFa8A=
+      x-amzn-RequestId:
+      - 0bdc2179-716e-457c-b80c-d8289dc85b80
+    status:
+      code: 200
+      message: OK
+version: 1

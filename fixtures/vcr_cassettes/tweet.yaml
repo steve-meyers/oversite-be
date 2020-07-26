@@ -1,0 +1,38 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: https://gentle-falls-99830.herokuapp.com/send-tweet?message=This%20is%20the%20last%20test%20tweet%20we%20need%20to%20send&handle=smj289
+  response:
+    body:
+      string: '{"message":"Message sent"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '26'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 26 Jul 2020 21:34:25 GMT
+      Etag:
+      - W/"1a-lk8mKbFjUaLuisUxrqlHen3AzFM"
+      Server:
+      - Cowboy
+      Via:
+      - 1.1 vegur
+      X-Powered-By:
+      - Express
+    status:
+      code: 200
+      message: OK
+version: 1

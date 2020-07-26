@@ -40,6 +40,9 @@ requests = "*"
 marshmallow = "*"
 python-dotenv = "*"
 coverage = "*"
+requests-mock = "*"
+vcrpy = "*"
+pyyaml = "*"
 
 [requires]
 python_version = "3.8"
