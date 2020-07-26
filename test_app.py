@@ -1,13 +1,17 @@
 import json
 from app import app
 import random
+import vcr
 
 test_browser = app.test_client()
 
-def test_index_page():
-    global test_browser
-    response = test_browser.get('/')
-    assert response.status_code == 200
+# def test_index_page():
+#   with vcr.use_cassette('fixtures/vcr_cassettes/synopsis.yaml'):
+#     response = urllib2.urlopen('http://www.iana.org/domains/reserved').read()
+#     assert 'Example domains' in response
+#     global test_browser
+#     response = test_browser.get('/')
+#     assert response.status_code == 200
 
 def test_it_returns_users():
     global test_browser
@@ -18,7 +22,9 @@ def test_it_returns_users():
 def test_it_returns_members_by_state():
     global test_browser
     state = 'co'
-    response = test_browser.get(f'/members_by_state/{state}')
+    with vcr.use_cassette('fixtures/vcr_cassettes/members_by_state.yaml'):
+      response = test_browser.get(f'/members_by_state/{state}')
+      
     response_data = json.loads(response.data)
     assert response.status_code == 200
     assert type(response_data) is dict
@@ -40,8 +46,11 @@ def test_it_returns_members_by_state():
 def test_it_returns_member_details():
     global test_browser
     member_id = 'G000562'
-    response = test_browser.get(f'/member/{member_id}')
-    response_data = json.loads(response.data)
+    
+    with vcr.use_cassette('fixtures/vcr_cassettes/member_details.yaml'):
+      response = test_browser.get(f'/member/{member_id}')
+      response_data = json.loads(response.data)
+    
     assert response.status_code == 200
     assert type(response_data) is dict
     assert 'results' in response_data
@@ -63,13 +72,12 @@ def test_it_returns_member_details():
     assert 'contact_form_url' in response_data.get('results')[0]
 
 def test_it_sends_tweet_to_microservice():
-    f = ['cool', 'great', 'awesome', 'chill', 'dude', 'yes', 'yazy'] 
-    num = [*range(10, 999999, 1)]
-    rand = random.choice(f)
-    rand_num = random.choice(num)
     global test_browser
     handle = 'smj289'
-    message = f'hello {rand} steven{rand_num}'
-    response = test_browser.get(f'/tweet?handle={handle}&message={message}')
-    response_data = json.loads(response.data)
+    message = 'This is the last test tweet we need to send'
+    
+    with vcr.use_cassette('fixtures/vcr_cassettes/tweet.yaml'):
+      response = test_browser.get(f'/tweet?handle={handle}&message={message}')
+      response_data = json.loads(response.data)
+    
     assert 'Message sent' == response_data.get('message')
