@@ -1,0 +1,132 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+      X-API-Key:
+      - JBIDWEsRXZPkQJPUHkaH5t26psMcJxS2x8kOPh0A
+    method: GET
+    uri: https://api.propublica.org/congress/v1/members/senate/CO/current.json
+  response:
+    body:
+      string: "{\n   \"status\":\"OK\",\n   \"copyright\":\"Copyright (c) 2020 Pro\
+        \ Publica Inc. All Rights Reserved.\",\n   \"results\":[\n      {\n      \
+        \   \"id\": \"G000562\",\n         \"name\": \"Cory Gardner\",\n         \"\
+        first_name\": \"Cory\",\n         \"middle_name\": null,\n         \"last_name\"\
+        : \"Gardner\",\n         \"suffix\": null,\n         \"role\": \"Senator,\
+        \ 2nd Class\",\n         \"gender\": \"M\",\n         \"party\": \"R\",\n\
+        \         \"times_topics_url\": \"\",\n         \"twitter_id\": \"SenCoryGardner\"\
+        ,\n         \"facebook_account\": null,\n         \"youtube_id\": null,\n\
+        \         \"seniority\": \"5\",\n         \"next_election\": \"2020\",\n \
+        \        \"api_uri\": \"https://api.propublica.org/congress/v1/members/G000562.json\"\
+        \n      },\n      {\n         \"id\": \"B001267\",\n         \"name\": \"\
+        Michael Bennet\",\n         \"first_name\": \"Michael\",\n         \"middle_name\"\
+        : null,\n         \"last_name\": \"Bennet\",\n         \"suffix\": null,\n\
+        \         \"role\": \"Senator, 3rd Class\",\n         \"gender\": \"M\",\n\
+        \         \"party\": \"D\",\n         \"times_topics_url\": \"http://topics.nytimes.com/top/reference/timestopics/people/b/michael_bennet/index.html\"\
+        ,\n         \"twitter_id\": \"SenBennetCo\",\n         \"facebook_account\"\
+        : \"senbennetco\",\n         \"youtube_id\": \"SenatorBennet\",\n        \
+        \ \"seniority\": \"11\",\n         \"next_election\": \"2022\",\n        \
+        \ \"api_uri\": \"https://api.propublica.org/congress/v1/members/B001267.json\"\
+        \n      }\n]}\n"
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+      Access-Control-Allow-Methods:
+      - GET,OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1344'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 27 Jul 2020 02:40:24 GMT
+      Via:
+      - 1.1 ec4d04f2befcd6652834fd368a8b671e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - WUY5HWZxJESUQ59Fxx4dXVyU56GSiQ9VWjCBSjTRXtOK6qh6OM9noA==
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amzn-Trace-Id:
+      - Root=1-5f1e3e98-e64e1e782ce83aa48e7bb98a;Sampled=0
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - QT63xGSuoAMF3Pw=
+      x-amzn-RequestId:
+      - a8339084-f370-4f01-a0b1-a9aa2402da93
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.24.0
+      X-API-Key:
+      - JBIDWEsRXZPkQJPUHkaH5t26psMcJxS2x8kOPh0A
+    method: GET
+    uri: https://api.propublica.org/congress/v1/members/house/CO/7/current.json
+  response:
+    body:
+      string: "{\n   \"status\":\"OK\",\n   \"copyright\":\"Copyright (c) 2020 Pro\
+        \ Publica Inc. All Rights Reserved.\",\n   \"results\":[\n      {\n      \
+        \   \"id\": \"P000593\",\n         \"name\": \"Ed Perlmutter\",\n        \
+        \ \"first_name\": \"Ed\",\n         \"middle_name\": null,\n         \"last_name\"\
+        : \"Perlmutter\",\n         \"suffix\": null,\n         \"role\": \"Representative\"\
+        ,\n         \"gender\": \"M\",\n         \"party\": \"D\",\n         \"times_topics_url\"\
+        : null,\n         \"twitter_id\": \"RepPerlmutter\",\n         \"facebook_account\"\
+        : \"RepPerlmutter\",\n         \"youtube_id\": \"RepPerlmutter\",\n      \
+        \   \"seniority\": \"14\",\n         \"next_election\": \"2020\",\n      \
+        \   \"api_uri\": \"https://api.propublica.org/congress/v1/members/P000593.json\"\
+        ,\n         \"district\": \"7\",\n         \"at_large\": false\n      }\n\
+        ]}\n"
+    headers:
+      Access-Control-Allow-Headers:
+      - Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+      Access-Control-Allow-Methods:
+      - GET,OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '750'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 27 Jul 2020 02:40:24 GMT
+      Via:
+      - 1.1 e158a5cd644f102abc630a9f56b59d78.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - iy_ABHQTaQWmMOAzmswdX1ewcQYMnlIKjr4dEOwC9K85-BiReyhCvg==
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amzn-Trace-Id:
+      - Root=1-5f1e3e98-72edfefb8120ccedd52a5f94
+      X-Cache:
+      - Miss from cloudfront
+      x-amz-apigw-id:
+      - QT63zGwtoAMF74Q=
+      x-amzn-RequestId:
+      - 07aa56e3-d15a-439f-bf96-e6c259e2c5e3
+    status:
+      code: 200
+      message: OK
+version: 1

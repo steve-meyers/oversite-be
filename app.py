@@ -31,6 +31,8 @@ def add_user():
     street_address = request.args.get('street_address')
     state = request.args.get('state')
     zip = request.args.get('zip')
+    district = request.args.get('district')
+
     try:
         user = User(
             first_name=first_name,
@@ -38,14 +40,14 @@ def add_user():
             email=email,
             street_address=street_address,
             state=state,
-            zip=zip
+            zip=zip,
+            district=district
         )
         db.session.add(user)
         db.session.commit()
         return "User added. user id={}".format(user.id)
     except Exception as e:
         return(str(e))
-
 
 @app.route("/users")
 def get_all():
@@ -69,6 +71,43 @@ def get_members_by_state(state_):
     headers = {'X-API-Key': os.getenv('PROP_API')}
     URL_SENATE = f'https://api.propublica.org/congress/v1/members/senate/{state_}/current.json'
     URL_HOUSE = f'https://api.propublica.org/congress/v1/members/house/{state_}/current.json'
+    senate_response = requests.get(URL_SENATE, headers = headers).json()
+    house_response = requests.get(URL_HOUSE, headers = headers).json()
+    senate_results = senate_response['results']
+    house_results = house_response['results']
+
+    senator_objects = map(lambda result: MemberIndex(id = result['id'],
+                                                     first_name = result['first_name'],
+                                                     party = result['party'],
+                                                     role = result['role'],
+                                                     last_name =result['last_name']),
+                                                     senate_results)
+
+    rep_objects = map(lambda result: MemberIndex(id = result['id'],
+                                                 first_name = result['first_name'],
+                                                 party = result['party'],
+                                                 role = result['role'],
+                                                 last_name =result['last_name']),
+                                                 house_results)
+                          
+    senators = list(senator_objects)
+    reps = list(rep_objects)
+
+    try:
+        return jsonify({"results": 
+        [{"senate": list(map(lambda member: member.serialize(), senators))}, 
+        {"house": list(map(lambda member: member.serialize(), reps))}]
+        })
+
+    except Exception as e:
+        return(str(e))
+
+@app.route("/users_members/<user_id_>")
+def get_users_reps(user_id_):
+    user = User.query.filter_by(id=user_id_).first()
+    headers = {'X-API-Key': os.getenv('PROP_API')}
+    URL_SENATE = f'https://api.propublica.org/congress/v1/members/senate/{user.state}/current.json'
+    URL_HOUSE = f'https://api.propublica.org/congress/v1/members/house/{user.state}/{user.district}/current.json'
     senate_response = requests.get(URL_SENATE, headers = headers).json()
     house_response = requests.get(URL_HOUSE, headers = headers).json()
     senate_results = senate_response['results']
