@@ -69,10 +69,8 @@ def get_by_id(id_):
 
 @app.route("/members_by_state/<state_>")
 def get_members_by_state(state_):
-    senate_response = PropublicaService.senators_by_state(state_)
-    house_response = PropublicaService.reps_by_state(state_)
-    senate_results = senate_response['results']
-    house_results = house_response['results']
+    senate_results = PropublicaService.senators_by_state(state_)
+    house_results = PropublicaService.reps_by_state(state_)
 
     senator_objects = map(lambda result: MemberIndex(id = result['id'],
                                                      first_name = result['first_name'],
@@ -103,13 +101,9 @@ def get_members_by_state(state_):
 @app.route("/users_reps/<user_id_>")
 def get_users_reps(user_id_):
     user = User.query.filter_by(id=user_id_).first()
-    headers = {'X-API-Key': os.getenv('PROP_API')}
-    URL_SENATE = f'https://api.propublica.org/congress/v1/members/senate/{user.state}/current.json'
-    URL_HOUSE = f'https://api.propublica.org/congress/v1/members/house/{user.state}/{user.district}/current.json'
-    senate_response = requests.get(URL_SENATE, headers = headers).json()
-    house_response = requests.get(URL_HOUSE, headers = headers).json()
-    senate_results = senate_response['results']
-    house_results = house_response['results']
+
+    senate_results = PropublicaService.senators_by_state(user.state)
+    house_results = PropublicaService.reps_by_district(user.state, user.district)
 
     senator_objects = map(lambda result: MemberIndex(id = result['id'],
                                                      first_name = result['first_name'],
@@ -139,9 +133,7 @@ def get_users_reps(user_id_):
 
 @app.route("/member/<id_>")
 def get_member_details(id_):
-    response = PropublicaService.member_details(id_)
-    result = response['results'][0]
-
+    result = PropublicaService.member_details(id_)
     member = MemberShow(result)
 
     try:

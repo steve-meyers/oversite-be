@@ -18,7 +18,8 @@ class MemberShow:
         self.website = data['url']
         self.contact_form_url = data['roles'][0]['contact_form']
 
-    def party_name(self, party):
+    def party_name(self, data):
+        party = data['current_party']
         if party == 'R':
           return 'Republican'
         elif party == 'D':
