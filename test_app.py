@@ -5,14 +5,6 @@ import vcr
 
 test_browser = app.test_client()
 
-# def test_index_page():
-#   with vcr.use_cassette('fixtures/vcr_cassettes/synopsis.yaml'):
-#     response = urllib2.urlopen('http://www.iana.org/domains/reserved').read()
-#     assert 'Example domains' in response
-#     global test_browser
-#     response = test_browser.get('/')
-#     assert response.status_code == 200
-
 def test_it_returns_users():
     global test_browser
     response = test_browser.get('/users')
@@ -24,6 +16,30 @@ def test_it_returns_members_by_state():
     state = 'co'
     with vcr.use_cassette('fixtures/vcr_cassettes/members_by_state.yaml'):
       response = test_browser.get(f'/members_by_state/{state}')
+      
+    response_data = json.loads(response.data)
+    assert response.status_code == 200
+    assert type(response_data) is dict
+    
+    assert type(response_data['results'][0]['senate']) is list
+    assert 'id' in response_data['results'][0]['senate'][0]
+    assert 'first_name' in response_data['results'][0]['senate'][0]
+    assert 'last_name' in response_data['results'][0]['senate'][0]
+    assert 'party' in response_data['results'][0]['senate'][0]
+    assert 'role' in response_data['results'][0]['senate'][0]
+    
+    assert type(response_data['results'][1]['house']) is list
+    assert 'id' in response_data['results'][1]['house'][0]
+    assert 'first_name' in response_data['results'][1]['house'][0]
+    assert 'last_name' in response_data['results'][1]['house'][0]
+    assert 'party' in response_data['results'][1]['house'][0]
+    assert 'role' in response_data['results'][1]['house'][0]
+
+def test_it_returns_users_members():
+    global test_browser
+    user_id = 1
+    with vcr.use_cassette('fixtures/vcr_cassettes/users_reps.yaml'):
+      response = test_browser.get(f'/users_reps/{user_id}')
       
     response_data = json.loads(response.data)
     assert response.status_code == 200
