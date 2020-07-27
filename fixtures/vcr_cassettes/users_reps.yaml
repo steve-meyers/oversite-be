@@ -50,21 +50,21 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 27 Jul 2020 02:40:24 GMT
+      - Mon, 27 Jul 2020 03:32:55 GMT
       Via:
-      - 1.1 ec4d04f2befcd6652834fd368a8b671e.cloudfront.net (CloudFront)
+      - 1.1 e158a5cd644f102abc630a9f56b59d78.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - WUY5HWZxJESUQ59Fxx4dXVyU56GSiQ9VWjCBSjTRXtOK6qh6OM9noA==
+      - LFjF8TsRoj6Kb_iM4jJHPNB_t1yyauzgoxURjyEf9THfZ299KfmBtg==
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amzn-Trace-Id:
-      - Root=1-5f1e3e98-e64e1e782ce83aa48e7bb98a;Sampled=0
+      - Root=1-5f1e4ae7-85f283dce27c0aae105d1eb8;Sampled=0
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - QT63xGSuoAMF3Pw=
+      - QUCkQEMdoAMF4xw=
       x-amzn-RequestId:
-      - a8339084-f370-4f01-a0b1-a9aa2402da93
+      - a3ffc7f9-f371-4a94-bd16-9348710016d9
     status:
       code: 200
       message: OK
@@ -111,21 +111,21 @@ interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 27 Jul 2020 02:40:24 GMT
+      - Mon, 27 Jul 2020 03:32:56 GMT
       Via:
-      - 1.1 e158a5cd644f102abc630a9f56b59d78.cloudfront.net (CloudFront)
+      - 1.1 e4ca364cc5959e3bf697ae231c5b56b0.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - iy_ABHQTaQWmMOAzmswdX1ewcQYMnlIKjr4dEOwC9K85-BiReyhCvg==
+      - doTpUhHPNZwVOZ_TLn6_gV-r_HdYjb8yi5e8ZsqVJIrKnk4rjUCvxA==
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amzn-Trace-Id:
-      - Root=1-5f1e3e98-72edfefb8120ccedd52a5f94
+      - Root=1-5f1e4ae8-dfbeea8af79d6bcc7daac718
       X-Cache:
       - Miss from cloudfront
       x-amz-apigw-id:
-      - QT63zGwtoAMF74Q=
+      - QUCkSE7QIAMF2lg=
       x-amzn-RequestId:
-      - 07aa56e3-d15a-439f-bf96-e6c259e2c5e3
+      - e6b1622a-715f-4321-b68b-d585ff710008
     status:
       code: 200
       message: OK

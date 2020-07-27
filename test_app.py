@@ -38,8 +38,8 @@ def test_it_returns_members_by_state():
 def test_it_returns_users_members():
     global test_browser
     user_id = 1
-    with vcr.use_cassette('fixtures/vcr_cassettes/users_members.yaml'):
-      response = test_browser.get(f'/users_members/{user_id}')
+    with vcr.use_cassette('fixtures/vcr_cassettes/users_reps.yaml'):
+      response = test_browser.get(f'/users_reps/{user_id}')
       
     response_data = json.loads(response.data)
     assert response.status_code == 200

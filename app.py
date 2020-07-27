@@ -102,7 +102,7 @@ def get_members_by_state(state_):
     except Exception as e:
         return(str(e))
 
-@app.route("/users_members/<user_id_>")
+@app.route("/users_reps/<user_id_>")
 def get_users_reps(user_id_):
     user = User.query.filter_by(id=user_id_).first()
     headers = {'X-API-Key': os.getenv('PROP_API')}
