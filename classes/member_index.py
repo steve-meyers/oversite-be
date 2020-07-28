@@ -1,4 +1,4 @@
-import modules.formatable as format
+import modules.formattable as format
 
 class MemberIndex:
     def __init__(self, data):
