@@ -1,5 +1,5 @@
 from api.app import app
-from classes.member_index import MemberIndex
+from api.classes.member_index import MemberIndex
 
 def test_initialize():
   data = {

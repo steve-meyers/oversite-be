@@ -15,10 +15,10 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from models import User
-from services.propublica import PropublicaService
-from classes.member_index import MemberIndex
-from classes.member_show import MemberShow
+from api.models.user import User
+from api.services.propublica import PropublicaService
+from api.classes.member_index import MemberIndex
+from api.classes.member_show import MemberShow
 
 @app.route("/")
 def hello():

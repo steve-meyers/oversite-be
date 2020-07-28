@@ -1,5 +1,5 @@
 from api.app import app
-from classes.member_show import MemberShow
+from api.classes.member_show import MemberShow
 
 def test_initialize():
   data = {
