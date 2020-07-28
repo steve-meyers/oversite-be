@@ -24,6 +24,7 @@ def test_it_returns_members_by_state():
     assert response_data['results'][0]['senate'][0]['id'] == 'G000562'
     assert response_data['results'][0]['senate'][0]['first_name'] == 'Cory'
     assert response_data['results'][0]['senate'][0]['last_name'] == 'Gardner'
+    assert response_data['results'][0]['senate'][0]['image'] == 'https://theunitedstates.io/images/congress/original/G000562.jpg'
     assert response_data['results'][0]['senate'][0]['party'] == 'Republican'
     assert response_data['results'][0]['senate'][0]['role'] == 'Senator, 2nd Class'
 
@@ -31,6 +32,7 @@ def test_it_returns_members_by_state():
     assert response_data['results'][1]['house'][0]['id'] == 'D000197'
     assert response_data['results'][1]['house'][0]['first_name'] == 'Diana'
     assert response_data['results'][1]['house'][0]['last_name'] == 'DeGette'
+    assert response_data['results'][1]['house'][0]['image'] == 'https://theunitedstates.io/images/congress/original/D000197.jpg'
     assert response_data['results'][1]['house'][0]['party'] == 'Democrat'
     assert response_data['results'][1]['house'][0]['role'] == 'Representative'
 
@@ -43,11 +45,12 @@ def test_it_returns_users_members():
     response_data = json.loads(response.data)
     assert response.status_code == 200
     assert type(response_data) is dict
-
     assert type(response_data['results'][0]['senate']) is list
+    assert response_data['results'][0]['senate'][0]['image'] == 'https://theunitedstates.io/images/congress/original/G000562.jpg'
     assert response_data['results'][0]['senate'][0]['id'] == 'G000562'
     assert response_data['results'][0]['senate'][0]['first_name'] == 'Cory'
     assert response_data['results'][0]['senate'][0]['last_name'] == 'Gardner'
+
     assert response_data['results'][0]['senate'][0]['party'] == 'Republican'
     assert response_data['results'][0]['senate'][0]['role'] == 'Senator, 2nd Class'
 
@@ -55,6 +58,7 @@ def test_it_returns_users_members():
     assert response_data['results'][1]['house'][0]['id'] == 'P000593'
     assert response_data['results'][1]['house'][0]['first_name'] == 'Ed'
     assert response_data['results'][1]['house'][0]['last_name'] == 'Perlmutter'
+    assert response_data['results'][1]['house'][0]['image'] == 'https://theunitedstates.io/images/congress/original/P000593.jpg'
     assert response_data['results'][1]['house'][0]['party'] == 'Democrat'
     assert response_data['results'][1]['house'][0]['role'] == 'Representative'
 
