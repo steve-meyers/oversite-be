@@ -1,8 +1,9 @@
+import modules.formatable as format
 
 class MemberIndex:
     def __init__(self, data):
         self.id = data['id']
-        self.image = f'https://theunitedstates.io/images/congress/original/{self.id}.jpg'
+        self.image = format.image_url(data['id'])
         self.first_name = data['first_name']
         self.last_name = data['last_name']
         self.role = data['role']
