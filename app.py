@@ -17,11 +17,12 @@ db = SQLAlchemy(app)
 
 from models import User
 from services.propublica import PropublicaService
-from classes import MemberIndex, MemberShow
+from classes.member_index import MemberIndex
+from classes.member_show import MemberShow
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "Welcome to the OverSite API"
 
 
 @app.route("/add_new_user", methods = ['POST'])
@@ -72,19 +73,9 @@ def get_members_by_state(state_):
     senate_results = PropublicaService.senators_by_state(state_)
     house_results = PropublicaService.reps_by_state(state_)
 
-    senator_objects = map(lambda result: MemberIndex(id = result['id'],
-                                                     first_name = result['first_name'],
-                                                     party = result['party'],
-                                                     role = result['role'],
-                                                     last_name =result['last_name']),
-                                                     senate_results)
+    senator_objects = map(lambda result: MemberIndex(result), senate_results)
 
-    rep_objects = map(lambda result: MemberIndex(id = result['id'],
-                                                 first_name = result['first_name'],
-                                                 party = result['party'],
-                                                 role = result['role'],
-                                                 last_name =result['last_name']),
-                                                 house_results)
+    rep_objects = map(lambda result: MemberIndex(result), house_results)
 
     senators = list(senator_objects)
     reps = list(rep_objects)
@@ -105,19 +96,9 @@ def get_users_reps(user_id_):
     senate_results = PropublicaService.senators_by_state(user.state)
     house_results = PropublicaService.reps_by_district(user.state, user.district)
 
-    senator_objects = map(lambda result: MemberIndex(id = result['id'],
-                                                     first_name = result['first_name'],
-                                                     party = result['party'],
-                                                     role = result['role'],
-                                                     last_name =result['last_name']),
-                                                     senate_results)
+    senator_objects = map(lambda result: MemberIndex(result), senate_results)
 
-    rep_objects = map(lambda result: MemberIndex(id = result['id'],
-                                                 first_name = result['first_name'],
-                                                 party = result['party'],
-                                                 role = result['role'],
-                                                 last_name =result['last_name']),
-                                                 house_results)
+    rep_objects = map(lambda result: MemberIndex(result), house_results)
 
     senators = list(senator_objects)
     reps = list(rep_objects)
