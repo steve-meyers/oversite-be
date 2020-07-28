@@ -4,6 +4,12 @@ import vcr
 
 test_browser = app.test_client()
 
+def test_root_message():
+    global test_browser
+    response = test_browser.get('/')
+    assert response.status_code == 200
+    assert response.data == b'Welcome to the OverSite API'
+
 def test_it_returns_users():
     global test_browser
     response = test_browser.get('/users')
