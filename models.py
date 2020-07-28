@@ -1,5 +1,4 @@
-from api.app import db
-
+from app import db
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -24,10 +23,10 @@ class User(db.Model):
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
-
+    
     def serialize(self):
         return {
-            'id': self.id,
+            'id': self.id, 
             'first_name': self.first_name,
             'last_name': self.last_name,
             'email': self.email,
