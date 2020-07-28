@@ -27,6 +27,7 @@ def test_it_returns_members_by_state():
     assert response_data['results'][0]['senate'][0]['image'] == 'https://theunitedstates.io/images/congress/original/G000562.jpg'
     assert response_data['results'][0]['senate'][0]['party'] == 'Republican'
     assert response_data['results'][0]['senate'][0]['role'] == 'Senator, 2nd Class'
+    
 
     assert type(response_data['results'][1]['house']) is list
     assert response_data['results'][1]['house'][0]['id'] == 'D000197'
@@ -35,6 +36,7 @@ def test_it_returns_members_by_state():
     assert response_data['results'][1]['house'][0]['image'] == 'https://theunitedstates.io/images/congress/original/D000197.jpg'
     assert response_data['results'][1]['house'][0]['party'] == 'Democrat'
     assert response_data['results'][1]['house'][0]['role'] == 'Representative'
+    assert response_data['results'][1]['house'][0]['state'] == 'Colorado'
 
 def test_it_returns_users_members():
     global test_browser
@@ -50,7 +52,7 @@ def test_it_returns_users_members():
     assert response_data['results'][0]['senate'][0]['id'] == 'G000562'
     assert response_data['results'][0]['senate'][0]['first_name'] == 'Cory'
     assert response_data['results'][0]['senate'][0]['last_name'] == 'Gardner'
-
+    assert response_data['results'][0]['senate'][0]['state'] == 'Colorado'
     assert response_data['results'][0]['senate'][0]['party'] == 'Republican'
     assert response_data['results'][0]['senate'][0]['role'] == 'Senator, 2nd Class'
 
@@ -85,7 +87,7 @@ def test_it_returns_member_details():
     assert response_data.get('results')[0]['facebook'] == 'https://www.facebook.com/SenCoryGardner'
     assert response_data.get('results')[0]['party'] == 'Republican'
     assert response_data.get('results')[0]['chamber'] == 'Senate'
-    assert response_data.get('results')[0]['state'] == 'CO'
+    assert response_data.get('results')[0]['state'] == 'Colorado'
     assert response_data.get('results')[0]['district'] == None
     assert response_data.get('results')[0]['website'] == 'https://www.gardner.senate.gov'
     assert response_data.get('results')[0]['contact_form_url'] == 'https://www.gardner.senate.gov/contact-cory/email-cory'

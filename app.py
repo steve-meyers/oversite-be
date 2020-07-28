@@ -73,9 +73,9 @@ def get_members_by_state(state_):
     senate_results = PropublicaService.senators_by_state(state_)
     house_results = PropublicaService.reps_by_state(state_)
 
-    senator_objects = map(lambda result: MemberIndex(result), senate_results)
+    senator_objects = map(lambda result: MemberIndex(result, state_), senate_results)
 
-    rep_objects = map(lambda result: MemberIndex(result), house_results)
+    rep_objects = map(lambda result: MemberIndex(result, state_), house_results)
 
     senators = list(senator_objects)
     reps = list(rep_objects)
@@ -96,9 +96,9 @@ def get_users_reps(user_id_):
     senate_results = PropublicaService.senators_by_state(user.state)
     house_results = PropublicaService.reps_by_district(user.state, user.district)
 
-    senator_objects = map(lambda result: MemberIndex(result), senate_results)
+    senator_objects = map(lambda result: MemberIndex(result, user.state), senate_results)
 
-    rep_objects = map(lambda result: MemberIndex(result), house_results)
+    rep_objects = map(lambda result: MemberIndex(result, user.state), house_results)
 
     senators = list(senator_objects)
     reps = list(rep_objects)
