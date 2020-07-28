@@ -13,23 +13,12 @@ class MemberShow:
         self.twitter_handle = data['twitter_account']
         self.youtube = self.youtube_url(data)
         self.facebook = self.facebook_url(data)
-        self.party = self.party_name(data)
+        self.party = format.party_name(data['current_party'])
         self.chamber = data['roles'][0]['chamber']
         self.state = data['roles'][0]['state']
         self.district = self.district_filter(data)
         self.website = data['url']
         self.contact_form_url = data['roles'][0]['contact_form']
-
-    def party_name(self, data):
-        party = data['current_party']
-        if party == 'R':
-          return 'Republican'
-        elif party == 'D':
-          return 'Democrat'
-        elif party == 'I':
-          return 'Independent'
-        else:
-          return party
 
     def format_twitter_url(self, data):
         if data['twitter_account'] == None:

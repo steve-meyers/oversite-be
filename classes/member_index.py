@@ -7,18 +7,7 @@ class MemberIndex:
         self.first_name = data['first_name']
         self.last_name = data['last_name']
         self.role = data['role']
-        self.party = self.party_name(data)
-
-    def party_name(self, data):
-        party = data['party']
-        if party == 'R':
-          return 'Republican'
-        elif party == 'D':
-          return 'Democrat'
-        elif party == 'I':
-          return 'Independent'
-        else:
-          return party
+        self.party = format.party_name(data['party'])
 
     def serialize(self):
         return {
