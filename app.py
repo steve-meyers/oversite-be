@@ -16,6 +16,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 from models import User
+from services.propublica import PropublicaService
 from classes import MemberIndex, MemberShow
 
 @app.route("/")
@@ -68,13 +69,8 @@ def get_by_id(id_):
 
 @app.route("/members_by_state/<state_>")
 def get_members_by_state(state_):
-    headers = {'X-API-Key': os.getenv('PROP_API')}
-    URL_SENATE = f'https://api.propublica.org/congress/v1/members/senate/{state_}/current.json'
-    URL_HOUSE = f'https://api.propublica.org/congress/v1/members/house/{state_}/current.json'
-    senate_response = requests.get(URL_SENATE, headers = headers).json()
-    house_response = requests.get(URL_HOUSE, headers = headers).json()
-    senate_results = senate_response['results']
-    house_results = house_response['results']
+    senate_results = PropublicaService.senators_by_state(state_)
+    house_results = PropublicaService.reps_by_state(state_)
 
     senator_objects = map(lambda result: MemberIndex(id = result['id'],
                                                      first_name = result['first_name'],
@@ -89,13 +85,13 @@ def get_members_by_state(state_):
                                                  role = result['role'],
                                                  last_name =result['last_name']),
                                                  house_results)
-                          
+
     senators = list(senator_objects)
     reps = list(rep_objects)
 
     try:
-        return jsonify({"results": 
-        [{"senate": list(map(lambda member: member.serialize(), senators))}, 
+        return jsonify({"results":
+        [{"senate": list(map(lambda member: member.serialize(), senators))},
         {"house": list(map(lambda member: member.serialize(), reps))}]
         })
 
@@ -105,13 +101,9 @@ def get_members_by_state(state_):
 @app.route("/users_reps/<user_id_>")
 def get_users_reps(user_id_):
     user = User.query.filter_by(id=user_id_).first()
-    headers = {'X-API-Key': os.getenv('PROP_API')}
-    URL_SENATE = f'https://api.propublica.org/congress/v1/members/senate/{user.state}/current.json'
-    URL_HOUSE = f'https://api.propublica.org/congress/v1/members/house/{user.state}/{user.district}/current.json'
-    senate_response = requests.get(URL_SENATE, headers = headers).json()
-    house_response = requests.get(URL_HOUSE, headers = headers).json()
-    senate_results = senate_response['results']
-    house_results = house_response['results']
+
+    senate_results = PropublicaService.senators_by_state(user.state)
+    house_results = PropublicaService.reps_by_district(user.state, user.district)
 
     senator_objects = map(lambda result: MemberIndex(id = result['id'],
                                                      first_name = result['first_name'],
@@ -126,13 +118,13 @@ def get_users_reps(user_id_):
                                                  role = result['role'],
                                                  last_name =result['last_name']),
                                                  house_results)
-                          
+
     senators = list(senator_objects)
     reps = list(rep_objects)
 
     try:
-        return jsonify({"results": 
-        [{"senate": list(map(lambda member: member.serialize(), senators))}, 
+        return jsonify({"results":
+        [{"senate": list(map(lambda member: member.serialize(), senators))},
         {"house": list(map(lambda member: member.serialize(), reps))}]
         })
 
@@ -141,36 +133,15 @@ def get_users_reps(user_id_):
 
 @app.route("/member/<id_>")
 def get_member_details(id_):
-    headers = {'X-API-Key': os.getenv('PROP_API')}
-    URL = f'https://api.propublica.org/congress/v1/members/{id_}.json'
-    response = requests.get(URL, headers = headers).json()
-    result = response['results'][0]
-    
-    district = None
-    if result['roles'][0]['chamber'] == 'House':
-      district = result['roles'][0]['district']
-    
-    member = MemberShow(id = result['id'],
-               first_name = result['first_name'],
-               last_name = result['last_name'],
-               role = result['roles'][0]['title'],
-               phone = result['roles'][0]['phone'],
-               address = result['roles'][0]['office'],
-               twitter = result['twitter_account'],
-               youtube = result['youtube_account'],
-               facebook = result['facebook_account'],
-               party = result['roles'][0]['party'],
-               chamber = result['roles'][0]['chamber'],
-               state = result['roles'][0]['state'],
-               district = district,
-               website = result['url'],
-               contact_form_url = result['roles'][0]['contact_form'])
+    result = PropublicaService.member_details(id_)
+    member = MemberShow(result)
+
     try:
         return jsonify({'results': [member.serialize()]})
     except Exception as e:
         return(str(e))
 
-@app.route("/tweet")    
+@app.route("/tweet")
 def get_message_sent_to_twitter():
     handle = request.args.get('handle', None)
     message = request.args.get('message', None)

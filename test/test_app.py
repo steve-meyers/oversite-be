@@ -1,6 +1,5 @@
 import json
 from app import app
-import random
 import vcr
 
 test_browser = app.test_client()
