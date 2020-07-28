@@ -1,14 +1,8 @@
 import json
-from api.app import app
+from app import app
 import vcr
 
 test_browser = app.test_client()
-
-def test_root_message():
-    global test_browser
-    response = test_browser.get('/')
-    assert response.status_code == 200
-    assert response.data == b'Welcome to the OverSite API'
 
 def test_it_returns_users():
     global test_browser
@@ -19,7 +13,7 @@ def test_it_returns_users():
 def test_it_returns_members_by_state():
     global test_browser
     state = 'co'
-    with vcr.use_cassette('test/fixtures/vcr_cassettes/members_by_state.yaml'):
+    with vcr.use_cassette('fixtures/vcr_cassettes/members_by_state.yaml'):
       response = test_browser.get(f'/members_by_state/{state}')
 
     response_data = json.loads(response.data)
@@ -33,7 +27,7 @@ def test_it_returns_members_by_state():
     assert response_data['results'][0]['senate'][0]['image'] == 'https://theunitedstates.io/images/congress/original/G000562.jpg'
     assert response_data['results'][0]['senate'][0]['party'] == 'Republican'
     assert response_data['results'][0]['senate'][0]['role'] == 'Senator, 2nd Class'
-
+    
 
     assert type(response_data['results'][1]['house']) is list
     assert response_data['results'][1]['house'][0]['id'] == 'D000197'
@@ -47,7 +41,7 @@ def test_it_returns_members_by_state():
 def test_it_returns_users_members():
     global test_browser
     user_id = 1
-    with vcr.use_cassette('test/fixtures/vcr_cassettes/users_reps.yaml'):
+    with vcr.use_cassette('fixtures/vcr_cassettes/users_reps.yaml'):
       response = test_browser.get(f'/users_reps/{user_id}')
 
     response_data = json.loads(response.data)
@@ -74,7 +68,7 @@ def test_it_returns_member_details():
     global test_browser
     member_id = 'G000562'
 
-    with vcr.use_cassette('test/fixtures/vcr_cassettes/member_details.yaml'):
+    with vcr.use_cassette('fixtures/vcr_cassettes/member_details.yaml'):
       response = test_browser.get(f'/member/{member_id}')
       response_data = json.loads(response.data)
 
@@ -103,7 +97,7 @@ def test_it_sends_tweet_to_microservice():
     handle = 'smj289'
     message = 'This is the last test tweet we need to send'
 
-    with vcr.use_cassette('test/fixtures/vcr_cassettes/tweet.yaml'):
+    with vcr.use_cassette('fixtures/vcr_cassettes/tweet.yaml'):
       response = test_browser.get(f'/tweet?handle={handle}&message={message}')
       response_data = json.loads(response.data)
 
