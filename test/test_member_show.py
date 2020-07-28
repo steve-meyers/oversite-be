@@ -1,5 +1,5 @@
-from app import app
-from classes.member_show import MemberShow
+from api.app import app
+from api.classes.member_show import MemberShow
 
 def test_initialize():
   data = {
@@ -42,7 +42,7 @@ def test_initialize():
               "bills_cosponsored": 395,
               "missed_votes_pct": 0.69,
               "votes_with_party_pct": 98.61,
-              "votes_against_party_pct": 1.28 
+              "votes_against_party_pct": 1.28
           }]
   }
 

@@ -1,5 +1,5 @@
-from app import app
-from classes.member_index import MemberIndex
+from api.app import app
+from api.classes.member_index import MemberIndex
 
 def test_initialize():
   data = {
@@ -33,4 +33,3 @@ def test_initialize():
   assert member.role == 'Representative'
   assert member.party == 'Democrat'
   assert member.state == 'Colorado'
-
