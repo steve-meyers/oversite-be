@@ -1,8 +1,5 @@
-import json
 from app import app
 from classes.member_index import MemberIndex
-
-test_browser = app.test_client()
 
 def test_initialize():
   data = {

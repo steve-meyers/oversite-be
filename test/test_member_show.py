@@ -1,9 +1,5 @@
-import json
 from app import app
 from classes.member_show import MemberShow
-
-test_browser = app.test_client()
-
 
 def test_initialize():
   data = {
