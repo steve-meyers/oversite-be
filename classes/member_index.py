@@ -1,13 +1,14 @@
 import modules.formattable as format
 
 class MemberIndex:
-    def __init__(self, data):
+    def __init__(self, data, state):
         self.id = data['id']
         self.image = format.image_url(data['id'])
         self.first_name = data['first_name']
         self.last_name = data['last_name']
         self.role = data['role']
         self.party = format.party_name(data['party'])
+        self.state = format.full_state_name(state)
 
     def serialize(self):
         return {
@@ -16,5 +17,6 @@ class MemberIndex:
             'first_name': self.first_name,
             'last_name': self.last_name,
             'role': self.role,
-            'party': self.party
+            'party': self.party,
+            'state': self.state
         }

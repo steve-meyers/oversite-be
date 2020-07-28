@@ -15,7 +15,7 @@ class MemberShow:
         self.facebook = self.facebook_url(data)
         self.party = format.party_name(data['current_party'])
         self.chamber = data['roles'][0]['chamber']
-        self.state = data['roles'][0]['state']
+        self.state = format.full_state_name(data['roles'][0]['state'])
         self.district = self.district_filter(data)
         self.website = data['url']
         self.contact_form_url = data['roles'][0]['contact_form']
