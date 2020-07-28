@@ -1,5 +1,5 @@
 import json
-from app import app
+from api.app import app
 import vcr
 
 test_browser = app.test_client()
