@@ -11,7 +11,7 @@
 - [Taras Tarlov GitHub](https://github.com/ttarlov)
 
 ## Overview
-OverSite was our final cross pollination project at [Turing School of Software and Design](http://turing.io). The goal for this project was to build a full stack application from ideation to production in just 14 days. The emphasis was on was on creating a professional agile workflow with a combination of front-end and back-end developers.
+OverSite was our final cross pollination project at [Turing School of Software and Design](http://turing.io). The goal for this project was to build a full stack application from ideation to production in just 14 days. The emphasis was on creating a professional agile workflow with a combination of front-end and back-end developers.
 The core mission of OverSite is to amalgamate civic information into one easy to use application that allows the user to easily find Senator and Representative contact information, and Tweet at them directly through the app. Currently the user can search by state and access their local district level representatives throught their profile. 
 [Live Site](https://oversite-app.herokuapp.com/)
 
