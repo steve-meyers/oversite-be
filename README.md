@@ -23,7 +23,7 @@ Python on Flask, SQLAlchamy, Travis CI, Heroku, Pytest, Nightmare.js (Express/No
 ![heroku](https://user-images.githubusercontent.com/49219371/88857716-a40ab780-d1ab-11ea-8690-5a0c8b908ed7.png)
 ![flask](https://user-images.githubusercontent.com/49219371/88857723-a5d47b00-d1ab-11ea-8c37-21f80e27d6e7.png)
 ![TravisCI](https://user-images.githubusercontent.com/49219371/88857727-a705a800-d1ab-11ea-9055-fcff6d0edb4a.png)
-![Postgresql_logo](https://user-images.githubusercontent.com/49219371/88857731-a8cf6b80-d1ab-11ea-8a4f-8908ad729054.png)
+![Postgresql_logo](https://user-images.githubusercontent.com/49219371/88858000-272c0d80-d1ac-11ea-86fd-162e52b5a79d.png)
 ![python](https://user-images.githubusercontent.com/49219371/88857886-ec29da00-d1ab-11ea-8372-07551e33ed9a.png)
 ![sqlalchemy](https://user-images.githubusercontent.com/49219371/88857896-efbd6100-d1ab-11ea-92f5-c5a1d74b63ad.jpeg)
 ![nightmare](https://user-images.githubusercontent.com/49219371/88857694-9e14d680-d1ab-11ea-826b-620bc1633f33.png)
