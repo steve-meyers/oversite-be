@@ -32,25 +32,25 @@ Python on Flask, SQLAlchamy, Travis CI, Heroku, Pytest, Nightmare.js (Express/No
 
 
 **Challenges:**
-The main challenge of this project was connecting a front end and backend into a working deployed production application while implementing continues integration with testing. On the back-end, challenges included build a REST API using an entirely new language and framework. On the front end using Cypress with CI was a challenge that we hope to continue working on in future iterations.  
+The main challenge of this project was connecting a front end and back end into a working deployed production application while implementing continuous integration with testing. On the back end, challenges included build a REST API using an entirely new language and framework. On the front end using Cypress with CI was a challenge that we hope to continue working on in future iterations.  
 **Future Iterations**
 1. Ability to search for representatives by name, district, and other parameters.
 2. Log-in with Google OAuth. 
-3. Other means of messaging representative via Sendgrid. 
-4. "In The News" feature that will show the most recent news article using Google API for the chosen representative.    
-5. Tweet bot to use Twitter authentication.
+3. Other means of messaging representative such as an email via Sendgrid. 
+4. "In The News" feature that will show the most recent news article using the Google API for the chosen representative.    
+5. For the Tweet bot to use the Twitter authentication.
 
 
 ## Set-Up
 
-1. $ install pip
-2. $ pip3 install pipenv
-3. $ pipenv install 
-4. $ pipenv install virtualenv
-5. $ virtualenv env
-6. $ source env/bin/activate
-7. $ python3 manage.py runserver
-8.  Add .env file to root directory & Add API key to file shown below. (https://www.propublica.org/datastore/apis)
+1. $ run `install pip`
+2. $ run `pip3 install pipenv`
+3. $ run `pipenv install`
+4. $ run `pipenv install virtualenv`
+5. $ run `virtualenv env`
+6.  run `source env/bin/activate`
+7.  run `python3 manage.py runserver`
+8.  Add a .env file to the root directory & add your API key to the file shown below. (https://www.propublica.org/datastore/apis)
 ```
 export APP_SETTINGS="config.DevelopmentConfig"
 export DATABASE_URL="postgresql://localhost/oversite"
