@@ -19,14 +19,15 @@ React.js, React Router, React Hooks, Cypress, Heroku, Circle CI
 ***Back End:**
 Python on Flask, SQLAlchamy, Travis CI, Heroku, Pytest, Nightmare.js (Express/Node microservice), Postgres DB
 
-![express_node_js](https://user-images.githubusercontent.com/49219371/88857256-ccde7d00-d1aa-11ea-9cc5-bda3317b9cdb.jpeg)
-![flask](https://user-images.githubusercontent.com/49219371/88857257-cd771380-d1aa-11ea-8353-42c7a486f3cf.png)
-![heroku](https://user-images.githubusercontent.com/49219371/88857259-ce0faa00-d1aa-11ea-9e3f-fd0d12459fa9.png)
-![Postgresql_logo](https://user-images.githubusercontent.com/49219371/88857260-ce0faa00-d1aa-11ea-9cb5-b3b2a802b624.png)
-![python](https://user-images.githubusercontent.com/49219371/88857262-cea84080-d1aa-11ea-8b52-9e08e5e50c38.png)
-![sqlalchemy](https://user-images.githubusercontent.com/49219371/88857264-cea84080-d1aa-11ea-8b4b-f73a1fe89f0e.jpeg)
-![TravisCI](https://user-images.githubusercontent.com/49219371/88857266-cf40d700-d1aa-11ea-95b9-aff1822154aa.png)
-![nightmare](https://user-images.githubusercontent.com/49219371/88857357-ff887580-d1aa-11ea-8e05-4080e585b310.png)
+![express_node_js](https://user-images.githubusercontent.com/49219371/88857711-a2d98a80-d1ab-11ea-8f91-5af3f4a38ffa.jpeg)
+![heroku](https://user-images.githubusercontent.com/49219371/88857716-a40ab780-d1ab-11ea-8690-5a0c8b908ed7.png)
+![flask](https://user-images.githubusercontent.com/49219371/88857723-a5d47b00-d1ab-11ea-8c37-21f80e27d6e7.png)
+![TravisCI](https://user-images.githubusercontent.com/49219371/88857727-a705a800-d1ab-11ea-9055-fcff6d0edb4a.png)
+![Postgresql_logo](https://user-images.githubusercontent.com/49219371/88857731-a8cf6b80-d1ab-11ea-8a4f-8908ad729054.png)
+![python](https://user-images.githubusercontent.com/49219371/88857886-ec29da00-d1ab-11ea-8372-07551e33ed9a.png)
+![sqlalchemy](https://user-images.githubusercontent.com/49219371/88857896-efbd6100-d1ab-11ea-92f5-c5a1d74b63ad.jpeg)
+![nightmare](https://user-images.githubusercontent.com/49219371/88857694-9e14d680-d1ab-11ea-826b-620bc1633f33.png)
+
 
 **Challenges:**
 The main challenge of this project was connecting a front end and backend into a working deployed production application while implementing continues integration with testing. On the back-end, challenges included build a REST API using an entirely new language and framework. On the front end using Cypress with CI was a challenge that we hope to continue working on in future iterations.  
