@@ -133,7 +133,7 @@ Params: State(ex: CO,TX,FL,CA)
 ```
 
 
-### Representative of User given user.district
+### Representatives from the User's district
 Params: User ID from Database
 * "/users_reps/<user_id_>"
 ```
