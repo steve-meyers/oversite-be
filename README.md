@@ -43,14 +43,15 @@ The main challenge of this project was connecting a front end and back end into 
 
 ## Set-Up
 
-1. $ run `install pip`
-2. $ run `pip3 install pipenv`
-3. $  `pipenv install`
-4. $  `pipenv install virtualenv`
-5. $  `virtualenv env`
-6.  run `source env/bin/activate`
-7.  run `python3 manage.py runserver`
-8.  Add a .env file to the root directory & add your API key to the file shown below. (https://www.propublica.org/datastore/apis)
+1. Clone down the repo
+2. run `install pip`
+3. run `pip3 install pipenv`
+4. run `pipenv install`
+5. run `pipenv install virtualenv`
+6. run `virtualenv env`
+7. run `source env/bin/activate`
+8. run `python3 manage.py runserver`
+9. Add a .env file to the root directory & add your API key to the file shown below. (https://www.propublica.org/datastore/apis)
 ```
 export APP_SETTINGS="config.DevelopmentConfig"
 export DATABASE_URL="postgresql://localhost/oversite"
