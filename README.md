@@ -45,9 +45,9 @@ The main challenge of this project was connecting a front end and back end into 
 
 1. $ run `install pip`
 2. $ run `pip3 install pipenv`
-3. $ run `pipenv install`
-4. $ run `pipenv install virtualenv`
-5. $ run `virtualenv env`
+3. $  `pipenv install`
+4. $  `pipenv install virtualenv`
+5. $  `virtualenv env`
 6.  run `source env/bin/activate`
 7.  run `python3 manage.py runserver`
 8.  Add a .env file to the root directory & add your API key to the file shown below. (https://www.propublica.org/datastore/apis)
