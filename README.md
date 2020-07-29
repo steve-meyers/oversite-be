@@ -16,10 +16,9 @@ The core mission of OverSite is to amalgamate civic information into one easy to
 [Live Site](https://oversite-app.herokuapp.com/)
 
 **Technologies Used:**
-
-**Front End:**
+***Front End:***
 React.js, React Router, React Hooks, Cypress, Heroku, Circle CI  
-**Back End:**
+***Back End:**
 Python on Flask, SQLAlchamy, Travis CI, Heroku, Pytest, Nightmare.js (Express/Node microservice), Postgres DB
 
 ![express_node_js](https://user-images.githubusercontent.com/49219371/88857711-a2d98a80-d1ab-11ea-8f91-5af3f4a38ffa.jpeg)
@@ -59,45 +58,181 @@ PROP_API= <API KEY HERE>
 * ...
 
 ## API EndPoints 
+https://oversite-api.herokuapp.com/
+
+* "/"
+Response: 
+```
+Welcome to the OverSite API
+```
+
+### Search Representative By State
 Params: State(ex: CO,TX,FL,CA)
 * "/members_by_state/<state_>"
 ```
 {
-  "results": [
-    {
-      "senate": [
+    "results": [
         {
-          "first_name": "Dianne",
-          "last_name": "Feinstein",
-          "party": "D",
-          "role": "Senator, 1st Class"
-        },
-        { "first_name": "Kamala",
-          "last_name": "Harris",
-          "party": "D",
-          "role": "Senator, 3rd Class"}]},
-    {
-      "house": [
-        {
-          "first_name": "Tom",
-          "last_name": "McClintock",
-          "party": "R",
-          "role": "Representative"
-        },
-        {
-          "first_name": "Ken",
-          "last_name": "Calvert",
-          "party": "R",
-          "role": "Representative"
+            "senate": [
+                {
+                    "first_name": "Dianne",
+                    "id": "F000062",
+                    "image": "https://theunitedstates.io/images/congress/original/F000062.jpg",
+                    "last_name": "Feinstein",
+                    "party": "Democrat",
+                    "role": "Senator, 1st Class",
+                    "state": "California"
+                },
+                {
+                    "first_name": "Kamala",
+                    "id": "H001075",
+                    "image": "https://theunitedstates.io/images/congress/original/H001075.jpg",
+                    "last_name": "Harris",
+                    "party": "Democrat",
+                    "role": "Senator, 3rd Class",
+                    "state": "California"
+                }
+            ]
         },
         {
-          "first_name": "Jim",
-          "last_name": "Costa",
-          "party": "D",
-          "role": "Representative"
+            "house": [
+                {
+                    "first_name": "Tom",
+                    "id": "M001177",
+                    "image": "https://theunitedstates.io/images/congress/original/M001177.jpg",
+                    "last_name": "McClintock",
+                    "party": "Republican",
+                    "role": "Representative",
+                    "state": "California"
+                },
+                {
+                    "first_name": "Ken",
+                    "id": "C000059",
+                    "image": "https://theunitedstates.io/images/congress/original/C000059.jpg",
+                    "last_name": "Calvert",
+                    "party": "Republican",
+                    "role": "Representative",
+                    "state": "California"
+                },
+                {
+                    "first_name": "Jim",
+                    "id": "C001059",
+                    "image": "https://theunitedstates.io/images/congress/original/C001059.jpg",
+                    "last_name": "Costa",
+                    "party": "Democrat",
+                    "role": "Representative",
+                    "state": "California"
+                }...
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
 ```
+
+
+### Representative of User given user.district
+Params: User ID from Database
+* "/users_reps/<user_id_>"
+```
+{
+    "results": [
+        {
+            "senate": [
+                {
+                    "first_name": "Cory",
+                    "id": "G000562",
+                    "image": "https://theunitedstates.io/images/congress/original/G000562.jpg",
+                    "last_name": "Gardner",
+                    "party": "Republican",
+                    "role": "Senator, 2nd Class",
+                    "state": "Colorado"
+                },
+                {
+                    "first_name": "Michael",
+                    "id": "B001267",
+                    "image": "https://theunitedstates.io/images/congress/original/B001267.jpg",
+                    "last_name": "Bennet",
+                    "party": "Democrat",
+                    "role": "Senator, 3rd Class",
+                    "state": "Colorado"
+                }
+            ]
+        },
+        {
+            "house": [
+                {
+                    "first_name": "Ed",
+                    "id": "P000593",
+                    "image": "https://theunitedstates.io/images/congress/original/P000593.jpg",
+                    "last_name": "Perlmutter",
+                    "party": "Democrat",
+                    "role": "Representative",
+                    "state": "Colorado"
+                }
+            ]
+        }
+    ]
+}
+```
+
+
+### Member Show Page Response
+Params: Representative ID 
+* "/member/<id_>"
+```
+{
+    "results": [
+        {
+            "address": "354 Russell Senate Office Building",
+            "chamber": "Senate",
+            "contact_form_url": "https://www.gardner.senate.gov/contact-cory/email-cory",
+            "district": null,
+            "facebook": "https://www.facebook.com/SenCoryGardner",
+            "first_name": "Cory",
+            "id": "G000562",
+            "image": "https://theunitedstates.io/images/congress/original/G000562.jpg",
+            "last_name": "Gardner",
+            "party": "Republican",
+            "phone": "202-224-5941",
+            "role": "Senator, 2nd Class",
+            "state": "Colorado",
+            "twitter_handle": "SenCoryGardner",
+            "twitter_url": "https://twitter.com/SenCoryGardner",
+            "website": "https://www.gardner.senate.gov",
+            "youtube": null
+        }
+    ]
+}
+```
+
+### Member Show Page Response
+Params: handle: <reps handle>, message: <message> 
+* "/tweet"
+```
+{
+    "results": [
+        {
+            "address": "354 Russell Senate Office Building",
+            "chamber": "Senate",
+            "contact_form_url": "https://www.gardner.senate.gov/contact-cory/email-cory",
+            "district": null,
+            "facebook": "https://www.facebook.com/SenCoryGardner",
+            "first_name": "Cory",
+            "id": "G000562",
+            "image": "https://theunitedstates.io/images/congress/original/G000562.jpg",
+            "last_name": "Gardner",
+            "party": "Republican",
+            "phone": "202-224-5941",
+            "role": "Senator, 2nd Class",
+            "state": "Colorado",
+            "twitter_handle": "SenCoryGardner",
+            "twitter_url": "https://twitter.com/SenCoryGardner",
+            "website": "https://www.gardner.senate.gov",
+            "youtube": null
+        }
+    ]
+}
+```
+
+
+
