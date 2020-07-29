@@ -34,7 +34,8 @@ Python on Flask, SQLAlchamy, Travis CI, Heroku, Pytest, Nightmare.js (Express/No
 
 **Challenges:**
 The main challenge of this project was connecting a front end and back end into a working deployed production application while implementing continuous integration with testing. On the back end, challenges included build a REST API using an entirely new language and framework. On the front end using Cypress with CI was a challenge that we hope to continue working on in future iterations.  
-**Future Iterations**
+
+**Future Iterations:**
 1. Ability to search for representatives by name, district, and other parameters.
 2. Log-in with Google OAuth. 
 3. Other means of messaging representative such as an email via Sendgrid. 
@@ -42,7 +43,7 @@ The main challenge of this project was connecting a front end and back end into 
 5. For the Tweet bot to use the Twitter authentication.
 
 
-## Set-Up
+## Set-Up:
 
 1. Clone down the repo
 2. Run `install pip`
