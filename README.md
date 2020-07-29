@@ -54,7 +54,7 @@ The main challenge of this project was connecting a front end and back end into 
 7. Run `source env/bin/activate`
 8. Run `python3 manage.py runserver`
 9. Obtain an API Key from (https://www.propublica.org/datastore/apis)
-10. Add a .env file to the root directory & add your API key as shown below. 
+10. Add a `.env` file to the root directory & add your API key as shown below. 
 ```
 export APP_SETTINGS="config.DevelopmentConfig"
 export DATABASE_URL="postgresql://localhost/oversite"
