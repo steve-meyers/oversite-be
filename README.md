@@ -51,13 +51,13 @@ The main challenge of this project was connecting a front end and back end into 
 6. Run `virtualenv env`
 7. Run `source env/bin/activate`
 8. Run `python3 manage.py runserver`
-9. Add a .env file to the root directory & add your API key to the file shown below. (https://www.propublica.org/datastore/apis)
+9. Add a .env file to the root directory & add your API key as shown below. (https://www.propublica.org/datastore/apis)
 ```
 export APP_SETTINGS="config.DevelopmentConfig"
 export DATABASE_URL="postgresql://localhost/oversite"
 PROP_API= <API KEY HERE>
 ```
-* ...
+
 
 ## API EndPoints 
 https://oversite-api.herokuapp.com/
@@ -208,7 +208,7 @@ Params: Representative ID
 }
 ```
 
-### Member Show Page Response
+### Sending a Tweet Response
 * GET request given reps handle and message/tweet sent to Express Microservice to tweet given message to representative 
 Params: handle: "<reps handle>", message: "<message>" 
 * "/tweet"
