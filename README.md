@@ -18,12 +18,16 @@ The core mission of OverSite is to amalgamate civic information into one easy to
 React.js, React Router, React Hooks, Cypress, Heroku, Circle CI  
 ***Back End:**
 Python on Flask, SQLAlchamy, Travis CI, Heroku, Pytest, Nightmare.js (Express/Node microservice), Postgres DB
-![express_node_js](https://user-images.githubusercontent.com/49219371/88856531-84728f80-d1a9-11ea-91a5-c209c72ec52d.png)
-![flask](https://user-images.githubusercontent.com/49219371/88856534-850b2600-d1a9-11ea-878f-7e4fa12b7e80.png)
-![heroku](https://user-images.githubusercontent.com/49219371/88856535-850b2600-d1a9-11ea-806e-e3f8108554cf.png)
-![Postgresql_logo](https://user-images.githubusercontent.com/49219371/88856536-85a3bc80-d1a9-11ea-85e1-f3128f091e74.png)
-![python](https://user-images.githubusercontent.com/49219371/88856537-85a3bc80-d1a9-11ea-8723-38b19dc7dc2a.png)
-![sqlalchemy](https://user-images.githubusercontent.com/49219371/88856538-85a3bc80-d1a9-11ea-894e-1839e7a47d4f.png)
+
+![express_node_js](https://user-images.githubusercontent.com/49219371/88857256-ccde7d00-d1aa-11ea-9cc5-bda3317b9cdb.jpeg)
+![flask](https://user-images.githubusercontent.com/49219371/88857257-cd771380-d1aa-11ea-8353-42c7a486f3cf.png)
+![heroku](https://user-images.githubusercontent.com/49219371/88857259-ce0faa00-d1aa-11ea-9e3f-fd0d12459fa9.png)
+![Postgresql_logo](https://user-images.githubusercontent.com/49219371/88857260-ce0faa00-d1aa-11ea-9cb5-b3b2a802b624.png)
+![python](https://user-images.githubusercontent.com/49219371/88857262-cea84080-d1aa-11ea-8b52-9e08e5e50c38.png)
+![sqlalchemy](https://user-images.githubusercontent.com/49219371/88857264-cea84080-d1aa-11ea-8b4b-f73a1fe89f0e.jpeg)
+![TravisCI](https://user-images.githubusercontent.com/49219371/88857266-cf40d700-d1aa-11ea-95b9-aff1822154aa.png)
+![nightmare](https://user-images.githubusercontent.com/49219371/88857357-ff887580-d1aa-11ea-8e05-4080e585b310.png)
+
 **Challenges:**
 The main challenge of this project was connecting a front end and backend into a working deployed production application while implementing continues integration with testing. On the back-end, challenges included build a REST API using an entirely new language and framework. On the front end using Cypress with CI was a challenge that we hope to continue working on in future iterations.  
 **Future Iterations**
