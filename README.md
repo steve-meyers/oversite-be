@@ -4,11 +4,11 @@
 
 ## Team Members:
 
-[Steve Meyers GitHub](https://github.com/smg289)
-[Raymond Nguyen GitHub](https://github.com/itemniner)
-[Jenny Klich GitHub](https://github.com/jklich151)
-[Elliot Mackinnon GitHub](https://github.com/emackinnon1)
-[Taras Tarlov GitHub](https://github.com/ttarlov)
+- [Steve Meyers GitHub](https://github.com/smg289)
+- [Raymond Nguyen GitHub](https://github.com/itemniner)
+- [Jenny Klich GitHub](https://github.com/jklich151)
+- [Elliot Mackinnon GitHub](https://github.com/emackinnon1)
+- [Taras Tarlov GitHub](https://github.com/ttarlov)
 
 ## Overview
 OverSite was our final cross pollination project at [Turing School of Software and Design](http://turing.io). The goal for this project was to build a full stack application from ideation to production in just 14 days. The emphasis was on was on creating a professional agile workflow with a combination of front-end and back-end developers.
