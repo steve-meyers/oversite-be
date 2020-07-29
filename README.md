@@ -1,7 +1,9 @@
 # oversite-BACKEND
 
 <img width="405" alt="Screen Shot 2020-07-29 at 2 04 17 PM" src="https://user-images.githubusercontent.com/49219371/88853381-7e2de480-d1a4-11ea-8700-8d7cf59b8c26.png">
+
 ## Team Members:
+
 [Steve Meyers GitHub](https://github.com/smg289)
 [Raymond Nguyen GitHub](https://github.com/itemniner)
 [Jenny Klich GitHub](https://github.com/jklich151)
