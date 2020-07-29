@@ -16,6 +16,7 @@ The core mission of OverSite is to amalgamate civic information into one easy to
 [Live Site](https://oversite-app.herokuapp.com/)
 
 **Technologies Used:**
+
 ***Front End:***
 React.js, React Router, React Hooks, Cypress, Heroku, Circle CI  
 ***Back End:**
