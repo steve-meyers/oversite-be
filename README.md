@@ -38,6 +38,7 @@ The main challenge of this project was connecting a front end and backend into a
 2. Log-in with Google OAuth. 
 3. Other means of messaging representative via Sendgrid. 
 4. "In The News" feature that will show the most recent news article using Google API for the chosen representative.    
+5. Tweet bot to use Twitter authentication.
 
 
 ## Set-Up
@@ -60,7 +61,8 @@ PROP_API= <API KEY HERE>
 ## API EndPoints 
 https://oversite-api.herokuapp.com/
 
-* "/"
+* "/"<br>
+
 Response: 
 ```
 Welcome to the OverSite API
@@ -206,31 +208,12 @@ Params: Representative ID
 ```
 
 ### Member Show Page Response
-Params: handle: <reps handle>, message: <message> 
+* GET request given reps handle and message/tweet sent to Express Microservice to tweet given message to representative 
+Params: handle: "<reps handle>", message: "<message>" 
 * "/tweet"
 ```
 {
-    "results": [
-        {
-            "address": "354 Russell Senate Office Building",
-            "chamber": "Senate",
-            "contact_form_url": "https://www.gardner.senate.gov/contact-cory/email-cory",
-            "district": null,
-            "facebook": "https://www.facebook.com/SenCoryGardner",
-            "first_name": "Cory",
-            "id": "G000562",
-            "image": "https://theunitedstates.io/images/congress/original/G000562.jpg",
-            "last_name": "Gardner",
-            "party": "Republican",
-            "phone": "202-224-5941",
-            "role": "Senator, 2nd Class",
-            "state": "Colorado",
-            "twitter_handle": "SenCoryGardner",
-            "twitter_url": "https://twitter.com/SenCoryGardner",
-            "website": "https://www.gardner.senate.gov",
-            "youtube": null
-        }
-    ]
+ message: "message sent"
 }
 ```
 
