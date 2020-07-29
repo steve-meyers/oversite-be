@@ -16,9 +16,10 @@ The core mission of OverSite is to amalgamate civic information into one easy to
 [Live Site](https://oversite-app.herokuapp.com/)
 
 **Technologies Used:**
+
 ***Front End:***
 React.js, React Router, React Hooks, Cypress, Heroku, Circle CI  
-***Back End:**
+***Back End:***
 Python on Flask, SQLAlchamy, Travis CI, Heroku, Pytest, Nightmare.js (Express/Node microservice), Postgres DB
 
 ![express_node_js](https://user-images.githubusercontent.com/49219371/88857711-a2d98a80-d1ab-11ea-8f91-5af3f4a38ffa.jpeg)
