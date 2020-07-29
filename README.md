@@ -42,34 +42,25 @@ The main challenge of this project was connecting a front end and backend into a
 
 ## Set-Up
 
-* $ install pip
-
-* $ pip3 install pipenv
-
-* $ pipenv install 
-
-* $ pipenv install virtualenv
-
-* $ virtualenv env
-
-* $ source env/bin/activate
-
-* $ python3 manage.py runserver
-
-* Add .env file to root directory & Add API key to file shown below. (https://www.propublica.org/datastore/apis)
-
+1. $ install pip
+2. $ pip3 install pipenv
+3. $ pipenv install 
+4. $ pipenv install virtualenv
+5. $ virtualenv env
+6. $ source env/bin/activate
+7. $ python3 manage.py runserver
+8.  Add .env file to root directory & Add API key to file shown below. (https://www.propublica.org/datastore/apis)
 ```
 export APP_SETTINGS="config.DevelopmentConfig"
 export DATABASE_URL="postgresql://localhost/oversite"
 PROP_API= <API KEY HERE>
 ```
-
 * ...
 
 ## API EndPoints 
+Params: State(ex: CO,TX,FL,CA)
 * "/members_by_state/<state_>"
 ```
-
 {
   "results": [
     {
@@ -80,14 +71,10 @@ PROP_API= <API KEY HERE>
           "party": "D",
           "role": "Senator, 1st Class"
         },
-        {
-          "first_name": "Kamala",
+        { "first_name": "Kamala",
           "last_name": "Harris",
           "party": "D",
-          "role": "Senator, 3rd Class"
-        }
-      ]
-    },
+          "role": "Senator, 3rd Class"}]},
     {
       "house": [
         {
