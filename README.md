@@ -28,7 +28,7 @@ The core mission of OverSite is to amalgamate civic information into one easy to
 React.js, React Router, React Hooks, Cypress, Heroku, Circle CI  
 **Back End:**
 Python on Flask, SQLAlchamy, Travis CI, Heroku, Pytest, Nightmare.js (Express/Node microservice), Postgres DB
-
+<p align="center">
 ![express_node_js](https://user-images.githubusercontent.com/49219371/88857711-a2d98a80-d1ab-11ea-8f91-5af3f4a38ffa.jpeg)
 ![heroku](https://user-images.githubusercontent.com/49219371/88857716-a40ab780-d1ab-11ea-8690-5a0c8b908ed7.png)
 ![flask](https://user-images.githubusercontent.com/49219371/88857723-a5d47b00-d1ab-11ea-8c37-21f80e27d6e7.png)
@@ -38,7 +38,7 @@ Python on Flask, SQLAlchamy, Travis CI, Heroku, Pytest, Nightmare.js (Express/No
 ![python](https://user-images.githubusercontent.com/49219371/88857886-ec29da00-d1ab-11ea-8372-07551e33ed9a.png)
 ![sqlalchemy](https://user-images.githubusercontent.com/49219371/88857896-efbd6100-d1ab-11ea-92f5-c5a1d74b63ad.jpeg)
 ![nightmare](https://user-images.githubusercontent.com/49219371/88857694-9e14d680-d1ab-11ea-826b-620bc1633f33.png)
-
+</p>
 
 **Challenges:**
 The main challenge of this project was connecting a front end and back end into a working deployed production application while implementing continuous integration with testing. On the back end, challenges included build a REST API using an entirely new language and framework. On the front end using Cypress with CI was a challenge that we hope to continue working on in future iterations.  
