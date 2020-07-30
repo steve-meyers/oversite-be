@@ -4,7 +4,7 @@
 
 ## Team Members:
 
-- [Steve Meyers GitHub](https://github.com/smg289)
+- [Steve Meyers GitHub](https://github.com/smj289)
 - [Raymond Nguyen GitHub](https://github.com/itemniner)
 - [Jenny Klich GitHub](https://github.com/jklich151)
 - [Elliot Mackinnon GitHub](https://github.com/emackinnon1)
